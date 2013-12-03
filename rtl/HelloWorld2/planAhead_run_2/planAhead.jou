@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# PlanAhead v11.3
+# Build 48858 by hdbuild on Fri Aug 21 18:43:38 PDT 2009
+# Start of session at: 12/3/13 3:04:04 PM
+# Process ID: 10971
+#-----------------------------------------------------------
+source /home/oneseg13/oneseg/day1/rtl/HelloWorld2/pa.fromHdlPorts.tcl
+# hdi::project new -name HelloWorld2 -dir /home/oneseg13/oneseg/day1/rtl/HelloWorld2/planAhead_run_2
+# hdi::project setArch -name HelloWorld2 -arch virtex5
+# hdi::design setOptions -project HelloWorld2 -top netlist_1_EMPTY
+# hdi::param set -name project.paUcfFile -svalue sysele.ucf
+# hdi::floorplan new -name floorplan_1 -part xc5vlx50ff676-1 -project HelloWorld2
+# hdi::port import -project HelloWorld2 -verilog HelloWorld2_pa_ports.v work
+# hdi::pconst import -project HelloWorld2 -floorplan floorplan_1 -file sysele.ucf

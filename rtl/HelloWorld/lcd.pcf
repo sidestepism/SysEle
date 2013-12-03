@@ -1,0 +1,23 @@
+//! **************************************************************************
+// Written by: Map L.57 on Tue Dec 03 14:09:04 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "RW" LOCATE = SITE "R5" LEVEL 1;
+COMP "RST" LOCATE = SITE "T23" LEVEL 1;
+COMP "CLK" LOCATE = SITE "AD8" LEVEL 1;
+COMP "LCD_DATA<0>" LOCATE = SITE "R6" LEVEL 1;
+COMP "char<0>" LOCATE = SITE "U4" LEVEL 1;
+COMP "LCD_DATA<1>" LOCATE = SITE "T3" LEVEL 1;
+COMP "char<1>" LOCATE = SITE "V3" LEVEL 1;
+COMP "LCD_DATA<2>" LOCATE = SITE "R3" LEVEL 1;
+COMP "char<2>" LOCATE = SITE "T4" LEVEL 1;
+COMP "LCD_DATA<3>" LOCATE = SITE "P4" LEVEL 1;
+COMP "char<3>" LOCATE = SITE "T5" LEVEL 1;
+COMP "char<4>" LOCATE = SITE "U6" LEVEL 1;
+COMP "char<5>" LOCATE = SITE "U5" LEVEL 1;
+COMP "char<6>" LOCATE = SITE "U7" LEVEL 1;
+COMP "char<7>" LOCATE = SITE "T7" LEVEL 1;
+COMP "RS" LOCATE = SITE "R7" LEVEL 1;
+SCHEMATIC END;
+

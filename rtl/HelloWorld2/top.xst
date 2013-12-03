@@ -1,0 +1,6 @@
+set -tmpdir "/home/oneseg13/oneseg/day1/rtl/HelloWorld2/xst/projnav.tmp"
+set -xsthdpdir "/home/oneseg13/oneseg/day1/rtl/HelloWorld2/xst"
+elaborate
+-lso top.lso
+-ifn top.prj
+-ifmt mixed

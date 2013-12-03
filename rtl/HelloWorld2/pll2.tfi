@@ -1,0 +1,14 @@
+
+
+
+// Instantiate the module
+pll2 instance_name (
+    .CLKIN1_IN(CLKIN1_IN), 
+    .RST_IN(RST_IN), 
+    .CLKOUT0_OUT(CLKOUT0_OUT), 
+    .CLKOUT1_OUT(CLKOUT1_OUT), 
+    .CLKOUT2_OUT(CLKOUT2_OUT), 
+    .LOCKED_OUT(LOCKED_OUT)
+    );
+
+

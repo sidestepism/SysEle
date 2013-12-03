@@ -1,0 +1,3 @@
+verilog work "lcd_memory.v"
+verilog work "lcd_comm.v"
+verilog work "lcd.v"

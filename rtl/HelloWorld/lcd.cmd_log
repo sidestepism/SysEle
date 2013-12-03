@@ -1,0 +1,15 @@
+xst -ise "/home/oneseg13/oneseg/day1/rtl/HelloWorld/HelloWorld.ise" -intstyle ise -ifn "/home/oneseg13/oneseg/day1/rtl/HelloWorld/lcd.xst" -ofn "/home/oneseg13/oneseg/day1/rtl/HelloWorld/lcd.syr" 
+ngdbuild -ise "HelloWorld.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx50-ff676-1 lcd.ngc lcd.ngd  
+map -ise "HelloWorld.ise" -intstyle ise -p xc5vlx50-ff676-1 -w -logic_opt off -ol std -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o lcd_map.ncd lcd.ngd lcd.pcf 
+par -ise "HelloWorld.ise" -w -intstyle ise -ol std -t 1 lcd_map.ncd lcd.ncd lcd.pcf 
+trce -ise "/home/oneseg13/oneseg/day1/rtl/HelloWorld/HelloWorld.ise" -intstyle ise -v 3 -s 1 -fastpaths -xml lcd.twx lcd.ncd -o lcd.twr lcd.pcf 
+bitgen -ise "HelloWorld.ise" -intstyle ise -f lcd.ut lcd.ncd 
+ngdbuild -ise "HelloWorld.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx50-ff676-1 lcd.ngc lcd.ngd  
+map -ise "HelloWorld.ise" -intstyle ise -p xc5vlx50-ff676-1 -w -logic_opt off -ol std -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o lcd_map.ncd lcd.ngd lcd.pcf 
+par -ise "HelloWorld.ise" -w -intstyle ise -ol std -t 1 lcd_map.ncd lcd.ncd lcd.pcf 
+trce -ise "/home/oneseg13/oneseg/day1/rtl/HelloWorld/HelloWorld.ise" -intstyle ise -v 3 -s 1 -fastpaths -xml lcd.twx lcd.ncd -o lcd.twr lcd.pcf -ucf lcd.ucf 
+bitgen -ise "HelloWorld.ise" -intstyle ise -f lcd.ut lcd.ncd 
+ngdbuild -ise "HelloWorld.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx50-ff676-1 lcd.ngc lcd.ngd  
+map -ise "HelloWorld.ise" -intstyle ise -p xc5vlx50-ff676-1 -w -logic_opt off -ol std -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o lcd_map.ncd lcd.ngd lcd.pcf 
+par -ise "HelloWorld.ise" -w -intstyle ise -ol std -t 1 lcd_map.ncd lcd.ncd lcd.pcf 
+trce -ise "/home/oneseg13/oneseg/day1/rtl/HelloWorld/HelloWorld.ise" -intstyle ise -v 3 -s 1 -fastpaths -xml lcd.twx lcd.ncd -o lcd.twr lcd.pcf -ucf lcd.ucf 

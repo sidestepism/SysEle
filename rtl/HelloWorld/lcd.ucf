@@ -1,0 +1,17 @@
+NET "CLK" LOC = AD8;
+NET "LCD_DATA[0]" LOC = R6;
+NET "LCD_DATA[1]" LOC = T3;
+NET "LCD_DATA[2]" LOC = R3;
+NET "LCD_DATA[3]" LOC = P4;
+NET "RS" LOC = R7;
+NET "RST" LOC = T23;
+NET "RST" PULLUP;
+NET "RW" LOC = R5;
+NET "char[0]" LOC = U4;
+NET "char[1]" LOC = V3;
+NET "char[2]" LOC = T4;
+NET "char[3]" LOC = T5;
+NET "char[4]" LOC = U6;
+NET "char[5]" LOC = U5;
+NET "char[6]" LOC = U7;
+NET "char[7]" LOC = T7;
