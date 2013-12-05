@@ -14,6 +14,6 @@ module ber
    );
    
    assign valid_o = 1'b0;
-   assign error_rate = 32'h0;
+   assign error_rate = 123456789;
 
 endmodule

@@ -139,7 +139,7 @@ module sysele
       .update(lcd_update)
       );
    
-   lcd_ber_top lcd_ber_top_inst
+   num2char_test num2char_test_inst
      (
       .CLK(clk240),
       .RST(rstgen),
