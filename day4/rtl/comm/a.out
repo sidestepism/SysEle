@@ -1,0 +1,24 @@
+#! /export/cad/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x8d64ed8 .scope module, "iqmap_bpsk" "iqmap_bpsk" 2 2;
+ .timescale 0 0;
+v0x8d64c40_0 .net "CLK", 0 0, C4<z>; 0 drivers
+v0x8d8ced0_0 .net "RST", 0 0, C4<z>; 0 drivers
+v0x8d8cf30_0 .net "ce", 0 0, C4<z>; 0 drivers
+v0x8d8cf90_0 .net "raw", 0 0, C4<z>; 0 drivers
+v0x8d8cff8_0 .net "reader_data", 127 0, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; 0 drivers
+v0x8d8d058_0 .net "reader_en", 0 0, C4<z>; 0 drivers
+v0x8d8d0d8_0 .net "valid_i", 0 0, C4<z>; 0 drivers
+v0x8d8d138_0 .net "valid_o", 0 0, C4<0>; 1 drivers
+v0x8d8d1c0_0 .net "valid_raw", 0 0, C4<0>; 1 drivers
+v0x8d8d220_0 .net "xi", 10 0, C4<zzzzzzzzzzz>; 0 drivers
+v0x8d8d2b0_0 .net "xr", 10 0, C4<zzzzzzzzzzz>; 0 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "iqmap_bpsk.v";
