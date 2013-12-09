@@ -17,6 +17,47 @@ module iqdemap_bpsk
    output              raw
    );
 
-   assign valid_o = 0;
-	assign valid_raw = 0;
+   reg[7:0] bytes;
+   reg[127:0] data;
+   reg valid_output;
+
+   reg[2:0] state;
+   assign valid_o = valid_output;
+   assign valid_raw = 0;
+
+    assign writer_data = data;
+
+   always @(posedge CLK)
+       if (!RST) begin
+          state <= 0;
+	   bytes <= 0;
+          valid_output <= 0;
+       end else begin
+         if(state == 0) begin
+          valid_output <= 0;
+           if(valid_i) begin
+		state <= 1;
+             bytes <= 0;
+		valid_output <= 0;
+           end
+         end 
+	   
+	   if(state == 1) begin
+
+        //decode
+      data = (data << 1) + (ar > 0);
+	bytes = bytes + 1;
+       if(bytes == 0) begin
+          state <= 2;
+	    end
+
+	
+         end else if(state == 2) begin
+          // output
+	    valid_output <= 1;
+	     state <= 0;
+     end else begin
+         end
+     
+   end
 endmodule

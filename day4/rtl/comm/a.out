@@ -4,21 +4,99 @@
 :vpi_module "system";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_0x8d64ed8 .scope module, "iqmap_bpsk" "iqmap_bpsk" 2 2;
+S_0x8d099e0 .scope module, "iqdemap_bpsk" "iqdemap_bpsk" 2 2;
  .timescale 0 0;
-v0x8d64c40_0 .net "CLK", 0 0, C4<z>; 0 drivers
-v0x8d8ced0_0 .net "RST", 0 0, C4<z>; 0 drivers
-v0x8d8cf30_0 .net "ce", 0 0, C4<z>; 0 drivers
-v0x8d8cf90_0 .net "raw", 0 0, C4<z>; 0 drivers
-v0x8d8cff8_0 .net "reader_data", 127 0, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; 0 drivers
-v0x8d8d058_0 .net "reader_en", 0 0, C4<z>; 0 drivers
-v0x8d8d0d8_0 .net "valid_i", 0 0, C4<z>; 0 drivers
-v0x8d8d138_0 .net "valid_o", 0 0, C4<0>; 1 drivers
-v0x8d8d1c0_0 .net "valid_raw", 0 0, C4<0>; 1 drivers
-v0x8d8d220_0 .net "xi", 10 0, C4<zzzzzzzzzzz>; 0 drivers
-v0x8d8d2b0_0 .net "xr", 10 0, C4<zzzzzzzzzzz>; 0 drivers
+v0x8d09750_0 .net "CLK", 0 0, C4<z>; 0 drivers
+v0x8d32968_0 .net "RST", 0 0, C4<z>; 0 drivers
+v0x8d329c8_0 .net/s "ai", 10 0, C4<zzzzzzzzzzz>; 0 drivers
+v0x8d32a28_0 .net/s "ar", 10 0, C4<zzzzzzzzzzz>; 0 drivers
+v0x8d32a90_0 .var "bytes", 7 0;
+v0x8d32af0_0 .net "ce", 0 0, C4<z>; 0 drivers
+v0x8d32b70_0 .var "data", 127 0;
+v0x8d32bd0_0 .net "raw", 0 0, C4<z>; 0 drivers
+v0x8d32c58_0 .var "state", 2 0;
+v0x8d32cb8_0 .net "valid_i", 0 0, C4<z>; 0 drivers
+v0x8d32d48_0 .net "valid_o", 0 0, v0x8d32da8_0; 1 drivers
+v0x8d32da8_0 .var "valid_output", 0 0;
+v0x8d32e40_0 .net "valid_raw", 0 0, C4<0>; 1 drivers
+v0x8d32ea0_0 .net "writer_data", 127 0, v0x8d32b70_0; 1 drivers
+E_0x8d06520 .event posedge, v0x8d09750_0;
+    .scope S_0x8d099e0;
+T_0 ;
+    %wait E_0x8d06520;
+    %load/v 8, v0x8d32968_0, 1;
+    %inv 8, 1;
+    %jmp/0xz  T_0.0, 8;
+    %ix/load 0, 3, 0;
+    %assign/v0 v0x8d32c58_0, 0, 0;
+    %ix/load 0, 8, 0;
+    %assign/v0 v0x8d32a90_0, 0, 0;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x8d32da8_0, 0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/v 8, v0x8d32c58_0, 3;
+    %mov 11, 0, 1;
+    %cmpi/u 8, 0, 4;
+    %jmp/0xz  T_0.2, 4;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x8d32da8_0, 0, 0;
+    %load/v 8, v0x8d32cb8_0, 1;
+    %jmp/0xz  T_0.4, 8;
+    %movi 8, 1, 3;
+    %ix/load 0, 3, 0;
+    %assign/v0 v0x8d32c58_0, 0, 8;
+    %ix/load 0, 8, 0;
+    %assign/v0 v0x8d32a90_0, 0, 0;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x8d32da8_0, 0, 0;
+T_0.4 ;
+T_0.2 ;
+    %load/v 8, v0x8d32c58_0, 3;
+    %mov 11, 0, 1;
+    %cmpi/u 8, 1, 4;
+    %jmp/0xz  T_0.6, 4;
+    %load/v 8, v0x8d32b70_0, 128;
+    %ix/load 0, 1, 0;
+    %mov 4, 0, 1;
+    %shiftl/i0  8, 128;
+    %load/v 264, v0x8d32a28_0, 11;
+    %mov 275, 274, 1;
+    %cmp/s 0, 264, 12;
+    %mov 264, 5, 1;
+    %mov 136, 264, 1;
+    %mov 137, 0, 127;
+    %add 8, 136, 128;
+    %set/v v0x8d32b70_0, 8, 128;
+    %load/v 8, v0x8d32a90_0, 8;
+    %mov 16, 0, 24;
+    %addi 8, 1, 32;
+    %set/v v0x8d32a90_0, 8, 8;
+    %load/v 8, v0x8d32a90_0, 8;
+    %mov 16, 0, 1;
+    %cmpi/u 8, 0, 9;
+    %jmp/0xz  T_0.8, 4;
+    %movi 8, 2, 3;
+    %ix/load 0, 3, 0;
+    %assign/v0 v0x8d32c58_0, 0, 8;
+T_0.8 ;
+    %jmp T_0.7;
+T_0.6 ;
+    %load/v 8, v0x8d32c58_0, 3;
+    %mov 11, 0, 1;
+    %cmpi/u 8, 2, 4;
+    %jmp/0xz  T_0.10, 4;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x8d32da8_0, 0, 1;
+    %ix/load 0, 3, 0;
+    %assign/v0 v0x8d32c58_0, 0, 0;
+T_0.10 ;
+T_0.7 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
 # The file index is used to find the file name in the following table.
 :file_names 3;
     "N/A";
     "<interactive>";
-    "iqmap_bpsk.v";
+    "iqdemap_bpsk.v";
