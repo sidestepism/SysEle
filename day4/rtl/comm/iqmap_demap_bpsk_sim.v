@@ -13,27 +13,29 @@ module iqmap_demap_bpsk_sim;
    reg [127:0] reader_data;
    output [127:0] writer_data;
 
+   reg[31:0] rs;
    initial begin
+      rs = 1;
       $dumpfile("testadd.vcd");
       $dumpvars;
       ck <= 0;
 
-      reader_data <= ($random << 96) + ($random << 64) + ($random << 32) + $random;
+      reader_data <= ($random(rs) << 96) + ($random(rs) << 64) + ($random(rs) << 32) + $random(rs);
 
-      #20 rst = 0;
+      #10 rst = 0;
       #20 rst = 1;
 
       #20 valid_i_map = 1;
       #20 valid_i_map = 0;
 
-      #1000 $finish;
+      #3000 $finish;
    end
    always #10 ck <= ~ck;
 
    always @(posedge ck) begin
-      $monitor("%t valid_i_map: %b, valid_i_demap: %b, (%d, %d)", $time, valid_i_map, valid_i_demap, xr, xi);
+      $monitor("%t valid_i_map: %b, valid_i_demap: %b, (%d, %d), raw: %b", $time, valid_i_map, valid_i_demap, xr, xi, raw_map);
       if (valid_o_demap) begin
-         $monitor("%b", writer_data);
+         $monitor("reader: %b\nwriter: %b", reader_data, writer_data);
       end
    end
 

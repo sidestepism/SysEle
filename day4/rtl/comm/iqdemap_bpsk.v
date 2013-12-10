@@ -34,15 +34,16 @@ always @(posedge CLK) begin
       data = 0;
       valid_output <= 0;
    end else begin
+
       if(state == 0) begin
          valid_output <= 0;
          if(valid_i) begin
-            state <= 1;
-            bytes <= 0;
+            state = 1;
+            bytes <= 1;
             valid_output <= 0;
+            data = (data << 1) + (ar > 0);
          end
-      end
-      if(state == 1) begin
+      end else if(state == 1) begin
         //decode
         data = (data << 1) + (ar > 0);
         bytes = bytes + 1;
