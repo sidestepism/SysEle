@@ -19,7 +19,7 @@ module butterfly
 
     wire signed [width-1:0] wbr, wbi;
     assign wbr = ((br * wr) - (bi * wi)) >>> 22;
-    assign wbi = ((br * wi) + (br * wi)) >>> 22;
+    assign wbi = ((br * wi) + (bi * br)) >>> 22;
 
     always @(posedge CLK) begin
         xr <= ar + wbr;
@@ -27,6 +27,7 @@ module butterfly
         yr <= ar - wbr;
         yi <= ai - wbi;
     end
+
 endmodule
 
 module fft64
@@ -49,7 +50,7 @@ module fft64
     
     // reg [9:0] state;
     // 0 = idle, 1 = input, 2 = output, 3 = 
-    reg [5:0] samples;
+    reg [7:0] samples;
 
     reg [width-1:0] datar [0:63];
     reg [width-1:0] datai [0:63];
@@ -332,8 +333,8 @@ assign wi5 =
                     if(valid_a) begin
                         datar[samples] = ar;
                         datai[samples] = ai;
-                        samples <= 1;
-                        state <= 1;
+                        samples = 1;
+                        state = 1;
                     end
                 end
                 1: begin
@@ -345,7 +346,7 @@ assign wi5 =
                         datar[samples] = ar;
                         datai[samples] = ai;
                         samples = samples + 1;
-                        if(samples == 63) begin
+                        if(samples == 64) begin
                             state <= 2;
                             samples <= 0;
                         end

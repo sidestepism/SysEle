@@ -66,7 +66,7 @@ end
         a = i/(2**k)*(2**(k+1)) + i%(2**k)
         b = i/(2**k)*(2**(k+1)) + i%(2**k) + 2**k
         # 文を追加
-        butterflies += regs[a].butterflyWith(regs [b], (i*32/2**k)%64);
+        butterflies += regs[a].butterflyWith(regs [b], (i*64/2**k)%64);
     end
 end
 
