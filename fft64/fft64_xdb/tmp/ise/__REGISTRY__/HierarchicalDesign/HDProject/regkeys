@@ -2,7 +2,7 @@ CommandLine-Map
 
 s
 CommandLine-Ngdbuild
-
+/mnt/cad/Xilinx/11.1/ISE/bin/lin64/unwrapped/ngdbuild -ise fft64.ise -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx50-ff676-1 fft64.ngc fft64.ngd
 s
 CommandLine-Par
 

@@ -2,3 +2,7 @@ xst -ise "/home/oneseg13/oneseg/day4/fft64/fft64.ise" -intstyle ise -ifn "/home/
 xst -ise "/home/oneseg13/oneseg/day4/fft64/fft64.ise" -intstyle ise -ifn "/home/oneseg13/oneseg/day4/fft64/fft64.xst" -ofn "/home/oneseg13/oneseg/day4/fft64/fft64.syr" 
 xst -ise "/home/oneseg13/oneseg/day4/fft64/fft64.ise" -intstyle ise -ifn "/home/oneseg13/oneseg/day4/fft64/fft64.xst" -ofn "/home/oneseg13/oneseg/day4/fft64/fft64.syr" 
 xst -ise "/home/oneseg13/oneseg/day4/fft64/fft64.ise" -intstyle ise -ifn "/home/oneseg13/oneseg/day4/fft64/fft64.xst" -ofn "/home/oneseg13/oneseg/day4/fft64/fft64.syr" 
+ngdbuild -ise "fft64.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx50-ff676-1 fft64.ngc fft64.ngd  
+map -ise "fft64.ise" -intstyle ise -p xc5vlx50-ff676-1 -w -logic_opt off -ol std -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o fft64_map.ncd fft64.ngd fft64.pcf 
+par -ise "fft64.ise" -w -intstyle ise -ol std -t 1 fft64_map.ncd fft64.ncd fft64.pcf 
+trce -ise "/home/oneseg13/oneseg/day4/fft64/fft64.ise" -intstyle ise -v 3 -s 1 -fastpaths -xml fft64.twx fft64.ncd -o fft64.twr fft64.pcf 
