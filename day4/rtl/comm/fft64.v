@@ -333,8 +333,8 @@ assign wi5 =
                     if(valid_a) begin
                         datar[samples] = ar;
                         datai[samples] = ai;
-                        samples = 1;
-                        state = 1;
+                        samples <= 1;
+                        state <= 1;
                     end
                 end
                 1: begin
