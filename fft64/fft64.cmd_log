@@ -1,0 +1,4 @@
+xst -ise "/home/oneseg13/oneseg/day4/fft64/fft64.ise" -intstyle ise -ifn "/home/oneseg13/oneseg/day4/fft64/fft64.xst" -ofn "/home/oneseg13/oneseg/day4/fft64/fft64.syr" 
+xst -ise "/home/oneseg13/oneseg/day4/fft64/fft64.ise" -intstyle ise -ifn "/home/oneseg13/oneseg/day4/fft64/fft64.xst" -ofn "/home/oneseg13/oneseg/day4/fft64/fft64.syr" 
+xst -ise "/home/oneseg13/oneseg/day4/fft64/fft64.ise" -intstyle ise -ifn "/home/oneseg13/oneseg/day4/fft64/fft64.xst" -ofn "/home/oneseg13/oneseg/day4/fft64/fft64.syr" 
+xst -ise "/home/oneseg13/oneseg/day4/fft64/fft64.ise" -intstyle ise -ifn "/home/oneseg13/oneseg/day4/fft64/fft64.xst" -ofn "/home/oneseg13/oneseg/day4/fft64/fft64.syr" 
