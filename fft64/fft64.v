@@ -346,7 +346,7 @@ assign wi5 =
                         datar[samples] <= ar;
                         datai[samples] <= ai;
                         samples <= samples + 1;
-                        if(samples == 64) begin
+                        if(samples == 63) begin
                             state <= 2;
                             samples <= 0;
                         end
