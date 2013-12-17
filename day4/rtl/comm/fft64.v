@@ -50,7 +50,7 @@ module fft64
     
     // reg [9:0] state;
     // 0 = idle, 1 = input, 2 = output, 3 = 
-    reg [7:0] samples;
+    reg [5:0] samples;
 
     reg [width-1:0] datar [0:63];
     reg [width-1:0] datai [0:63];
