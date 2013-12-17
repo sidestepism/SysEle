@@ -2,6 +2,11 @@
 
 include Math
 
+64.times do |i|
+    print "wire [width-1:0] datawr#{i}; assign datawr#{i} = datar[#{i}]; \n"
+    print "wire [width-1:0] datawi#{i}; assign datawi#{i} = datai[#{i}]; \n"
+end
+
 class Reg
     attr_accessor :i, :d
     def initialize(i)
@@ -12,16 +17,27 @@ class Reg
         # n: W_n
         d0 = self.d
         d1 = other.d
+
         def wr(i)
-            return (cos(i) * 2**24).floor
+            s = cos(i.to_f/32*PI)
+            t = (s * (2**23)).floor
+            if (t == 0x80000) then t -= 1 end
+            return t;
         end
+
         def wi(i)
-            return (sin(i) * 2**24).floor
+            s = sin(i.to_f/32*PI)
+            t = (s * (2**23)).floor
+            if (t == 0x80000) then t -= 1 end
+            return t;
         end
-        return ["datar[xk(#{d0})] <= datar[#{d0}] + (datar[#{d1}] * #{wr(n)} - datai[#{d1}] * #{wi(n)}) <<< 24;",
-         "datai[xk(#{d0})] <= datai[#{d0}] + (datar[#{d1}] * #{wi(n)} + datai[#{d1}] * #{wr(n)}) <<< 24;",
-         "datar[xk(#{d0})] <= datar[#{d0}] - (datar[#{d1}] * #{wr(n)} + datai[#{d1}] * #{wi(n)}) <<< 24;",
-         "datai[xk(#{d0})] <= datai[#{d0}] - (datar[#{d1}] * #{wi(n)} - datai[#{d1}] * #{wr(n)}) <<< 24;"]
+        # print "#{wr(n)}, #{wi(n)}\n"
+
+        return [["datar[#{d0}]", "datai[#{d0}]", "datar[#{d1}]", "datai[#{d1}]", "#{wr(n)}", "#{wi(n)}"]]
+         #    "datar[#{d0}] <= datar[#{d0}] + (datar[#{d1}] * #{wr(n)} - datai[#{d1}] * #{wi(n)}) <<< 24;",
+         # "datai[#{d0}] <= datai[#{d0}] + (datar[#{d1}] * #{wi(n)} + datai[#{d1}] * #{wr(n)}) <<< 24;",
+         # "datar[#{d0}] <= datar[#{d0}] - (datar[#{d1}] * #{wr(n)} + datai[#{d1}] * #{wi(n)}) <<< 24;",
+         # "datai[#{d0}] <= datai[#{d0}] - (datar[#{d1}] * #{wi(n)} - datai[#{d1}] * #{wr(n)}) <<< 24;"]
     end
 end
 
@@ -54,16 +70,85 @@ end
     end
 end
 
-state = 2;
-while !butterflies.empty?
-    print "#{state}: begin\n"
-    butterflies[0, 6].map { |a|
-        print "    " + a + "\n"
-    }
-    butterflies[0, 6] = [];
-    state += 1
-    print "    state <= #{state}\n"
-    print "end\n"
-    
+6.times do |k|
+    print "assign ar#{k} = \n";
+    state = 2;
+    32.times do |i|
+        print " state == #{state} ? " + butterflies[i*6+k][0] + " :"
+        state += 1;
+    end
+    print "    0;\n"
+
+    print "assign ai#{k} = \n";
+    state = 2;
+    32.times do |i|
+        print " state == #{state} ? " + butterflies[i*6+k][1] + " :"
+        state += 1;
+    end
+    print "    0;\n"
+
+    print "assign br#{k} = \n";
+    state = 2;
+    32.times do |i|
+        print " state == #{state} ? " + butterflies[i*6+k][2] + " :"
+        state += 1;
+    end
+    print "    0;\n"
+
+    print "assign bi#{k} = \n";
+    state = 2;
+    32.times do |i|
+        print " state == #{state} ? " + butterflies[i*6+k][3] + " :"
+        state += 1;
+    end
+    print "    0;\n"
+
+    print "assign wr#{k} = \n";
+    state = 2;
+    32.times do |i|
+        print " state == #{state} ? " + butterflies[i*6+k][4] + " :"
+        state += 1;
+    end
+    print "    0;\n"
+
+    print "assign wi#{k} = \n";
+    state = 2;
+    32.times do |i|
+        print " state == #{state} ? " + butterflies[i*6+k][5] + " :"
+        state += 1;
+    end
+    print "    0;\n"
 end
+
+state = 3;
+32.times do |i|
+    print "#{state}: begin\n"
+    print "#{butterflies[i*6+0][0]} <= xr0; "
+    print "#{butterflies[i*6+0][1]} <= xi0; "
+    print "#{butterflies[i*6+0][2]} <= yr0; "
+    print "#{butterflies[i*6+0][3]} <= yi0; \n"
+    print "#{butterflies[i*6+1][0]} <= xr1; "
+    print "#{butterflies[i*6+1][1]} <= xi1; "
+    print "#{butterflies[i*6+1][2]} <= yr1; "
+    print "#{butterflies[i*6+1][3]} <= yi1; \n"
+    print "#{butterflies[i*6+2][0]} <= xr2; "
+    print "#{butterflies[i*6+2][1]} <= xi2; "
+    print "#{butterflies[i*6+2][2]} <= yr2; "
+    print "#{butterflies[i*6+2][3]} <= yi2; \n"
+    print "#{butterflies[i*6+3][0]} <= xr3; "
+    print "#{butterflies[i*6+3][1]} <= xi3; "
+    print "#{butterflies[i*6+3][2]} <= yr3; "
+    print "#{butterflies[i*6+3][3]} <= yi3; \n"
+    print "#{butterflies[i*6+4][0]} <= xr4; "
+    print "#{butterflies[i*6+4][1]} <= xi4; "
+    print "#{butterflies[i*6+4][2]} <= yr4; "
+    print "#{butterflies[i*6+4][3]} <= yi4; \n"
+    print "#{butterflies[i*6+5][0]} <= xr5; "
+    print "#{butterflies[i*6+5][1]} <= xi5; "
+    print "#{butterflies[i*6+5][2]} <= yr5; "
+    print "#{butterflies[i*6+5][3]} <= yi5; "
+    state += 1;
+    print "\n    state <= #{state};\nend\n"
+end
+
 
