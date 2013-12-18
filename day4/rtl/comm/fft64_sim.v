@@ -40,7 +40,7 @@ module sim_fft64;
         #1280 valid_i = 0;
         #2560 
         #1280
-        #60$finish;
+        #60 $finish;
     end
 
     always #10 ck <= ~ck;
