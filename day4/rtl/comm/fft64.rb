@@ -20,14 +20,14 @@ class Reg
 
         def wr(i)
             s = cos(i.to_f/32*PI)
-            t = (s * (2**23)).floor
+            t = (s * (2**11)).floor
             if (t == 0x80000) then t -= 1 end
             return t;
         end
 
         def wi(i)
-            s = sin(i.to_f/32*PI)
-            t = (s * (2**23)).floor
+            s = -sin(i.to_f/32*PI)
+            t = (s * (2**11)).floor
             if (t == 0x80000) then t -= 1 end
             return t;
         end
@@ -59,16 +59,32 @@ butterflies = [];
     regs [i] = Reg.new(i)
 end
 
+# 6.times do |k|
+#     # k段目
+#     32.times do |i|
+#         # i個目のバタフライ
+#         a = i/(2**k)*(2**(k+1)) + i%(2**k)
+#         b = i/(2**k)*(2**(k+1)) + i%(2**k) + 2**k
+#         n = (i*32/2**k)%64
+#         # 文を追加
+#         butterflies += regs[a].butterflyWith(regs [b], n);
+#         print "#{k}段目の butterfly: #{a} with #{b}, n = #{n}\n"
+#     end
+# end
+
 6.times do |k|
     # k段目
     32.times do |i|
         # i個目のバタフライ
         a = i/(2**k)*(2**(k+1)) + i%(2**k)
         b = i/(2**k)*(2**(k+1)) + i%(2**k) + 2**k
+        n = (i*32/2**k)%64
         # 文を追加
-        butterflies += regs[a].butterflyWith(regs [b], (i*32/2**k)%64);
+        butterflies += regs[a].butterflyWith(regs [b], n);
+        print "#{k}段目の butterfly: #{a} with #{b}, n = #{n}\n"
     end
 end
+
 
 6.times do |k|
     print "assign ar#{k} = \n";
@@ -121,6 +137,7 @@ end
 end
 
 state = 3;
+
 32.times do |i|
     print "#{state}: begin\n"
     print "#{butterflies[i*6+0][0]} <= xr0; "
@@ -150,5 +167,14 @@ state = 3;
     state += 1;
     print "\n    state <= #{state};\nend\n"
 end
+
+
+print "#{state}: begin\n"
+64.times do |i|
+    print "datar[#{regs[i].d}] <= datar[#{regs[i].i}];\n"
+    print "datai[#{regs[i].d}] <= datai[#{regs[i].i}];\n"
+end
+state += 1;
+print "\n    state <= #{state};\nend\n"
 
 
