@@ -48,11 +48,7 @@ module sim_fft64;
    always @(posedge ck) begin
       samples = samples + valid_i;
       // ar = samples == 1 ? 2048 : 0;
-<<<<<<< HEAD
-      ar <= (samples == 0) ? 1 : 0;
-=======
-      ar <= (samples == 1) ? 256 : 0;
->>>>>>> bugfix
+      ar <= (samples == 0) ? 256 : 0;
       ai <= (samples == 0) ? 0 : 0;
       $monitor("%t valid_i: %b, valid_o: %b, full: %b, state: %d, (%d, %d)", $time, valid_i, valid_o, full, state, ar, ai);
       if (valid_o) begin

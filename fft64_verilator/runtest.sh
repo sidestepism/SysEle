@@ -3,7 +3,7 @@
 set -e;
 
 # ADD FILES HERE!
-verilogs='../../rtl/fft64.v'
+verilogs='../day4/rtl/comm/fft64.v'
 
 echo ${verilogs}
 
