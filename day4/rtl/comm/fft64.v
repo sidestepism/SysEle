@@ -1,6 +1,4 @@
 
-/* verilator lint_off WIDTH */
-
 // 乗算器
 module butterfly
   #(parameter width = 11)
@@ -26,8 +24,8 @@ module butterfly
     assign sbr = (br * wr) - (bi * wi);
     assign sbi = (br * wi) + (bi * wr);
 
-    assign wbr = (sbr >>> 11);
-    assign wbi = (sbi >>> 11);
+    assign wbr = sbr >>> 11;
+    assign wbi = sbi >>> 11;
 
     always @(posedge CLK) begin
         xr <= ar + wbr;
@@ -65,7 +63,7 @@ module fft64
     
     // reg [9:0] state;
     // 0 = idle, 1 = input, 2 = output, 3 = 
-    reg [5:0] samples;
+    reg [7:0] samples;
 
     reg [width-1:0] datar [0:63];
     reg [width-1:0] datai [0:63];
@@ -348,17 +346,20 @@ assign wi5 =
                     if(valid_a) begin
                         datar[samples] = ar;
                         datai[samples] = ai;
-                        samples <= 1;
-                        state <= 1;
+                        samples = 1;
+                        state = 1;
                     end
                 end
-
                 1: begin
                     if(valid_a) begin
+                        // datar << width;
+                        // datar <= datar + ar;
+                        // datai << width;
+                        // datai <= datai + ai;
                         datar[samples] = ar;
                         datai[samples] = ai;
-                        samples <= samples + 1;
-                        if(samples == 63) begin
+                        samples = samples + 1;
+                        if(samples == 64) begin
                             state <= 2;
                             samples <= 0;
                         end
@@ -790,7 +791,7 @@ end
 
 36: begin
     samples <= samples + 1;
-    if(samples == 0) begin
+    if(samples == 63) begin
         state <= 0;
         samples <= 0;
     end
