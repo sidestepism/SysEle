@@ -20,15 +20,13 @@ class Reg
 
         def wr(i)
             s = cos(i.to_f/32*PI)
-            t = (s * (2**11)).floor
-            if (t == 0x80000) then t -= 1 end
+            t = (s * (2**11)).round
             return t;
         end
 
         def wi(i)
             s = -sin(i.to_f/32*PI)
-            t = (s * (2**11)).floor
-            if (t == 0x80000) then t -= 1 end
+            t = (s * (2**11)).round
             return t;
         end
         # print "#{wr(n)}, #{wi(n)}\n"
@@ -40,6 +38,22 @@ class Reg
          # "datai[#{d0}] <= datai[#{d0}] - (datar[#{d1}] * #{wi(n)} - datai[#{d1}] * #{wr(n)}) <<< 24;"]
     end
 end
+
+64.times do |j|
+    def wr(i)
+        s = cos(i.to_f/32*PI)
+        t = (s * (2**11)).floor
+        return t;
+    end
+
+    def wi(i)
+        s = -sin(i.to_f/32*PI)
+        t = (s * (2**11)).floor
+        return t;
+    end
+    print "#{wr(j)} #{wi(j)}"
+end
+
 
 
 class Car
@@ -78,7 +92,7 @@ end
         # i個目のバタフライ
         a = i/(2**k)*(2**(k+1)) + i%(2**k)
         b = i/(2**k)*(2**(k+1)) + i%(2**k) + 2**k
-        n = (i*32/2**k)%64
+        n = (i*32 / 2**k)%64
         # 文を追加
         butterflies += regs[a].butterflyWith(regs [b], n);
         print "#{k}段目の butterfly: #{a} with #{b}, n = #{n}\n"
