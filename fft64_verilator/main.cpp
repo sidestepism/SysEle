@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
     top->RST = 1;
     top->eval();
 
-    cout << "ce\tvalid_i\tar\tai\tbr\tbi\txr\txi\tyr\tyi\tvalid_o\n";
+    cout << "valid_i\tar\tai\tbr\tbi\txr\txi\tyr\tyi\tvalid_o\n";
     while (!Verilated::gotFinish()) {
         if (top->CLK) {
             tb.set_input(top);
@@ -78,6 +78,7 @@ testbench::testbench(int n)
         cout << "n should be a multiple of 64" << endl;
         exit(EXIT_FAILURE);
     }
+
     for (int i=0; i<n; i++) {
         ar.push_back(random() & 0x3ff);
         ai.push_back(random() & 0x3ff);
@@ -88,6 +89,17 @@ testbench::testbench(int n)
         ar[i] /= 64;
         ai[i] /= 64;
     }
+
+    for (int i=0; i<64; i++) {
+        cout << "datar[" << i << "] = " << ar[i] << ";";
+    }
+    cout << endl;
+
+    for (int i=0; i<64; i++) {
+        cout << "datai[" << i << "] = " << ai[i] << ";";
+    }
+    cout << endl;
+
 
     int fftn = 64;
     fftw_complex *in, *out;
@@ -135,9 +147,9 @@ testbench::testbench(int n)
     cout << "\n\n";
 
     cout << "ar.size() = " << ar.size() << "\n"
-         << "ar.size() = " << ai.size() << "\n"
-         << "ar.size() = " << xr.size() << "\n"
-         << "ar.size() = " << xi.size() << "\n";
+         << "ai.size() = " << ai.size() << "\n"
+         << "xr.size() = " << xr.size() << "\n"
+         << "xi.size() = " << xi.size() << "\n";
     count16 = 0;
     invalid_top = 10;
     mode = invalid;
@@ -191,11 +203,12 @@ void testbench::verify_output(Vfft64 *top)
 
     // FULL
     cout << (int)top->valid_a << "\t"
-         << (int)top->ar << "\t"
-         << (int)top->ai << "\t"
+         << (signed short)top->ar << "\t"
+         << (signed short)top->ai << "\t"
          << (int)txr << "\t(" << (int)xr[eindex] << ")" << "\t"
          << (int)txi << "\t(" << (int)xi[eindex] << ")" << "\t"
          << (int)top->valid_o << "\t"
+         << (int)top->state << "\t"
          << "(" << eindex << ")\n";
 
     // if (top->ce) 

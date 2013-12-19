@@ -1,3 +1,4 @@
+/* verilator lint_off WIDTH */
 
 // 乗算器
 module butterfly
@@ -63,7 +64,7 @@ module fft64
     
     // reg [9:0] state;
     // 0 = idle, 1 = input, 2 = output, 3 = 
-    reg [7:0] samples;
+    reg [5:0] samples;
 
     reg [width-1:0] datar [0:63];
     reg [width-1:0] datai [0:63];
@@ -332,9 +333,8 @@ assign wi5 =
 
     assign valid_o = state == 36;
     assign full = state > 1;
-    assign xr = datar[samples];
-    assign xi = datai[samples];
-
+    assign xr = samples == 0 ? datar[63] : datar[samples-1];
+    assign xi = samples == 0 ? datai[63] : datai[samples-1];
     always @(posedge CLK) begin
         if(!RST) begin
             // reset 
@@ -346,20 +346,20 @@ assign wi5 =
                     if(valid_a) begin
                         datar[samples] = ar;
                         datai[samples] = ai;
-                        samples = 1;
-                        state = 1;
+                        samples <= 1;
+                        state <= 1;
                     end
                 end
                 1: begin
-                    if(valid_a) begin
+                    if(valid_a != 0) begin
                         // datar << width;
                         // datar <= datar + ar;
                         // datai << width;
                         // datai <= datai + ai;
                         datar[samples] = ar;
                         datai[samples] = ai;
-                        samples = samples + 1;
-                        if(samples == 64) begin
+                        samples <= samples + 1;
+                        if(samples == 63) begin
                             state <= 2;
                             samples <= 0;
                         end
@@ -368,6 +368,7 @@ assign wi5 =
 2: begin
     state <= 3;
 end
+
 3: begin
 datar[0] <= xr0; datai[0] <= xi0; datar[32] <= yr0; datai[32] <= yi0; 
 datar[16] <= xr1; datai[16] <= xi1; datar[48] <= yr1; datai[48] <= yi1; 
@@ -420,8 +421,11 @@ datar[0] <= xr2; datai[0] <= xi2; datar[16] <= yr2; datai[16] <= yi2;
 datar[32] <= xr3; datai[32] <= xi3; datar[48] <= yr3; datai[48] <= yi3; 
 datar[8] <= xr4; datai[8] <= xi4; datar[24] <= yr4; datai[24] <= yi4; 
 datar[40] <= xr5; datai[40] <= xi5; datar[56] <= yr5; datai[56] <= yi5; 
-    state <= 9;
+    state <= 36;
 end
+
+
+
 9: begin
 datar[4] <= xr0; datai[4] <= xi0; datar[20] <= yr0; datai[20] <= yi0; 
 datar[36] <= xr1; datai[36] <= xi1; datar[52] <= yr1; datai[52] <= yi1; 
@@ -787,6 +791,7 @@ datar[63] <= datar[63];
 datai[63] <= datai[63];
 
     state <= 36;
+    samples <= 0;
 end
 
 36: begin
