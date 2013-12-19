@@ -1,5 +1,5 @@
 
-// 荵礼ｮ怜勣
+// 乗算器
 module butterfly
   #(parameter width = 11)
     (
@@ -19,7 +19,7 @@ module butterfly
 
     wire signed [width-1:0] wbr, wbi;
     assign wbr = ((br * wr) - (bi * wi)) >>> 22;
-    assign wbi = ((br * wi) + (bi * bi)) >>> 22;
+    assign wbi = ((br * wi) + (bi - bi)) >>> 22;
 
     always @(posedge CLK) begin
         xr <= ar + wbr;
@@ -331,8 +331,8 @@ assign wi5 =
             case(state)
                 0: begin
                     if(valid_a) begin
-                        datar[samples] <= ar;
-                        datai[samples] <= ai;
+                        datar[samples] = ar;
+                        datai[samples] = ai;
                         samples <= 1;
                         state <= 1;
                     end
@@ -343,10 +343,10 @@ assign wi5 =
                         // datar <= datar + ar;
                         // datai << width;
                         // datai <= datai + ai;
-                        datar[samples] <= ar;
-                        datai[samples] <= ai;
-                        samples <= samples + 1;
-                        if(samples == 63) begin
+                        datar[samples] = ar;
+                        datai[samples] = ai;
+                        samples = samples + 1;
+                        if(samples == 64) begin
                             state <= 2;
                             samples <= 0;
                         end

@@ -126,198 +126,6 @@ wire [width-1:0] datawr62; assign datawr62 = datar[62];
 wire [width-1:0] datawi62; assign datawi62 = datai[62]; 
 wire [width-1:0] datawr63; assign datawr63 = datar[63]; 
 wire [width-1:0] datawi63; assign datawi63 = datai[63]; 
-0段目の butterfly: 0 with 1, n = 0
-0段目の butterfly: 2 with 3, n = 32
-0段目の butterfly: 4 with 5, n = 0
-0段目の butterfly: 6 with 7, n = 32
-0段目の butterfly: 8 with 9, n = 0
-0段目の butterfly: 10 with 11, n = 32
-0段目の butterfly: 12 with 13, n = 0
-0段目の butterfly: 14 with 15, n = 32
-0段目の butterfly: 16 with 17, n = 0
-0段目の butterfly: 18 with 19, n = 32
-0段目の butterfly: 20 with 21, n = 0
-0段目の butterfly: 22 with 23, n = 32
-0段目の butterfly: 24 with 25, n = 0
-0段目の butterfly: 26 with 27, n = 32
-0段目の butterfly: 28 with 29, n = 0
-0段目の butterfly: 30 with 31, n = 32
-0段目の butterfly: 32 with 33, n = 0
-0段目の butterfly: 34 with 35, n = 32
-0段目の butterfly: 36 with 37, n = 0
-0段目の butterfly: 38 with 39, n = 32
-0段目の butterfly: 40 with 41, n = 0
-0段目の butterfly: 42 with 43, n = 32
-0段目の butterfly: 44 with 45, n = 0
-0段目の butterfly: 46 with 47, n = 32
-0段目の butterfly: 48 with 49, n = 0
-0段目の butterfly: 50 with 51, n = 32
-0段目の butterfly: 52 with 53, n = 0
-0段目の butterfly: 54 with 55, n = 32
-0段目の butterfly: 56 with 57, n = 0
-0段目の butterfly: 58 with 59, n = 32
-0段目の butterfly: 60 with 61, n = 0
-0段目の butterfly: 62 with 63, n = 32
-1段目の butterfly: 0 with 2, n = 0
-1段目の butterfly: 1 with 3, n = 16
-1段目の butterfly: 4 with 6, n = 32
-1段目の butterfly: 5 with 7, n = 48
-1段目の butterfly: 8 with 10, n = 0
-1段目の butterfly: 9 with 11, n = 16
-1段目の butterfly: 12 with 14, n = 32
-1段目の butterfly: 13 with 15, n = 48
-1段目の butterfly: 16 with 18, n = 0
-1段目の butterfly: 17 with 19, n = 16
-1段目の butterfly: 20 with 22, n = 32
-1段目の butterfly: 21 with 23, n = 48
-1段目の butterfly: 24 with 26, n = 0
-1段目の butterfly: 25 with 27, n = 16
-1段目の butterfly: 28 with 30, n = 32
-1段目の butterfly: 29 with 31, n = 48
-1段目の butterfly: 32 with 34, n = 0
-1段目の butterfly: 33 with 35, n = 16
-1段目の butterfly: 36 with 38, n = 32
-1段目の butterfly: 37 with 39, n = 48
-1段目の butterfly: 40 with 42, n = 0
-1段目の butterfly: 41 with 43, n = 16
-1段目の butterfly: 44 with 46, n = 32
-1段目の butterfly: 45 with 47, n = 48
-1段目の butterfly: 48 with 50, n = 0
-1段目の butterfly: 49 with 51, n = 16
-1段目の butterfly: 52 with 54, n = 32
-1段目の butterfly: 53 with 55, n = 48
-1段目の butterfly: 56 with 58, n = 0
-1段目の butterfly: 57 with 59, n = 16
-1段目の butterfly: 60 with 62, n = 32
-1段目の butterfly: 61 with 63, n = 48
-2段目の butterfly: 0 with 4, n = 0
-2段目の butterfly: 1 with 5, n = 8
-2段目の butterfly: 2 with 6, n = 16
-2段目の butterfly: 3 with 7, n = 24
-2段目の butterfly: 8 with 12, n = 32
-2段目の butterfly: 9 with 13, n = 40
-2段目の butterfly: 10 with 14, n = 48
-2段目の butterfly: 11 with 15, n = 56
-2段目の butterfly: 16 with 20, n = 0
-2段目の butterfly: 17 with 21, n = 8
-2段目の butterfly: 18 with 22, n = 16
-2段目の butterfly: 19 with 23, n = 24
-2段目の butterfly: 24 with 28, n = 32
-2段目の butterfly: 25 with 29, n = 40
-2段目の butterfly: 26 with 30, n = 48
-2段目の butterfly: 27 with 31, n = 56
-2段目の butterfly: 32 with 36, n = 0
-2段目の butterfly: 33 with 37, n = 8
-2段目の butterfly: 34 with 38, n = 16
-2段目の butterfly: 35 with 39, n = 24
-2段目の butterfly: 40 with 44, n = 32
-2段目の butterfly: 41 with 45, n = 40
-2段目の butterfly: 42 with 46, n = 48
-2段目の butterfly: 43 with 47, n = 56
-2段目の butterfly: 48 with 52, n = 0
-2段目の butterfly: 49 with 53, n = 8
-2段目の butterfly: 50 with 54, n = 16
-2段目の butterfly: 51 with 55, n = 24
-2段目の butterfly: 56 with 60, n = 32
-2段目の butterfly: 57 with 61, n = 40
-2段目の butterfly: 58 with 62, n = 48
-2段目の butterfly: 59 with 63, n = 56
-3段目の butterfly: 0 with 8, n = 0
-3段目の butterfly: 1 with 9, n = 4
-3段目の butterfly: 2 with 10, n = 8
-3段目の butterfly: 3 with 11, n = 12
-3段目の butterfly: 4 with 12, n = 16
-3段目の butterfly: 5 with 13, n = 20
-3段目の butterfly: 6 with 14, n = 24
-3段目の butterfly: 7 with 15, n = 28
-3段目の butterfly: 16 with 24, n = 32
-3段目の butterfly: 17 with 25, n = 36
-3段目の butterfly: 18 with 26, n = 40
-3段目の butterfly: 19 with 27, n = 44
-3段目の butterfly: 20 with 28, n = 48
-3段目の butterfly: 21 with 29, n = 52
-3段目の butterfly: 22 with 30, n = 56
-3段目の butterfly: 23 with 31, n = 60
-3段目の butterfly: 32 with 40, n = 0
-3段目の butterfly: 33 with 41, n = 4
-3段目の butterfly: 34 with 42, n = 8
-3段目の butterfly: 35 with 43, n = 12
-3段目の butterfly: 36 with 44, n = 16
-3段目の butterfly: 37 with 45, n = 20
-3段目の butterfly: 38 with 46, n = 24
-3段目の butterfly: 39 with 47, n = 28
-3段目の butterfly: 48 with 56, n = 32
-3段目の butterfly: 49 with 57, n = 36
-3段目の butterfly: 50 with 58, n = 40
-3段目の butterfly: 51 with 59, n = 44
-3段目の butterfly: 52 with 60, n = 48
-3段目の butterfly: 53 with 61, n = 52
-3段目の butterfly: 54 with 62, n = 56
-3段目の butterfly: 55 with 63, n = 60
-4段目の butterfly: 0 with 16, n = 0
-4段目の butterfly: 1 with 17, n = 2
-4段目の butterfly: 2 with 18, n = 4
-4段目の butterfly: 3 with 19, n = 6
-4段目の butterfly: 4 with 20, n = 8
-4段目の butterfly: 5 with 21, n = 10
-4段目の butterfly: 6 with 22, n = 12
-4段目の butterfly: 7 with 23, n = 14
-4段目の butterfly: 8 with 24, n = 16
-4段目の butterfly: 9 with 25, n = 18
-4段目の butterfly: 10 with 26, n = 20
-4段目の butterfly: 11 with 27, n = 22
-4段目の butterfly: 12 with 28, n = 24
-4段目の butterfly: 13 with 29, n = 26
-4段目の butterfly: 14 with 30, n = 28
-4段目の butterfly: 15 with 31, n = 30
-4段目の butterfly: 32 with 48, n = 32
-4段目の butterfly: 33 with 49, n = 34
-4段目の butterfly: 34 with 50, n = 36
-4段目の butterfly: 35 with 51, n = 38
-4段目の butterfly: 36 with 52, n = 40
-4段目の butterfly: 37 with 53, n = 42
-4段目の butterfly: 38 with 54, n = 44
-4段目の butterfly: 39 with 55, n = 46
-4段目の butterfly: 40 with 56, n = 48
-4段目の butterfly: 41 with 57, n = 50
-4段目の butterfly: 42 with 58, n = 52
-4段目の butterfly: 43 with 59, n = 54
-4段目の butterfly: 44 with 60, n = 56
-4段目の butterfly: 45 with 61, n = 58
-4段目の butterfly: 46 with 62, n = 60
-4段目の butterfly: 47 with 63, n = 62
-5段目の butterfly: 0 with 32, n = 0
-5段目の butterfly: 1 with 33, n = 1
-5段目の butterfly: 2 with 34, n = 2
-5段目の butterfly: 3 with 35, n = 3
-5段目の butterfly: 4 with 36, n = 4
-5段目の butterfly: 5 with 37, n = 5
-5段目の butterfly: 6 with 38, n = 6
-5段目の butterfly: 7 with 39, n = 7
-5段目の butterfly: 8 with 40, n = 8
-5段目の butterfly: 9 with 41, n = 9
-5段目の butterfly: 10 with 42, n = 10
-5段目の butterfly: 11 with 43, n = 11
-5段目の butterfly: 12 with 44, n = 12
-5段目の butterfly: 13 with 45, n = 13
-5段目の butterfly: 14 with 46, n = 14
-5段目の butterfly: 15 with 47, n = 15
-5段目の butterfly: 16 with 48, n = 16
-5段目の butterfly: 17 with 49, n = 17
-5段目の butterfly: 18 with 50, n = 18
-5段目の butterfly: 19 with 51, n = 19
-5段目の butterfly: 20 with 52, n = 20
-5段目の butterfly: 21 with 53, n = 21
-5段目の butterfly: 22 with 54, n = 22
-5段目の butterfly: 23 with 55, n = 23
-5段目の butterfly: 24 with 56, n = 24
-5段目の butterfly: 25 with 57, n = 25
-5段目の butterfly: 26 with 58, n = 26
-5段目の butterfly: 27 with 59, n = 27
-5段目の butterfly: 28 with 60, n = 28
-5段目の butterfly: 29 with 61, n = 29
-5段目の butterfly: 30 with 62, n = 30
-5段目の butterfly: 31 with 63, n = 31
 assign ar0 = 
  state == 2 ? datar[0] : state == 3 ? datar[12] : state == 4 ? datar[6] : state == 5 ? datar[9] : state == 6 ? datar[3] : state == 7 ? datar[15] : state == 8 ? datar[4] : state == 9 ? datar[10] : state == 10 ? datar[1] : state == 11 ? datar[13] : state == 12 ? datar[7] : state == 13 ? datar[16] : state == 14 ? datar[2] : state == 15 ? datar[22] : state == 16 ? datar[5] : state == 17 ? datar[19] : state == 18 ? datar[0] : state == 19 ? datar[24] : state == 20 ? datar[10] : state == 21 ? datar[17] : state == 22 ? datar[3] : state == 23 ? datar[27] : state == 24 ? datar[8] : state == 25 ? datar[20] : state == 26 ? datar[1] : state == 27 ? datar[25] : state == 28 ? datar[13] : state == 29 ? datar[16] : state == 30 ? datar[4] : state == 31 ? datar[28] : state == 32 ? datar[10] : state == 33 ? datar[22] :    0;
 assign ai0 = 
@@ -327,9 +135,9 @@ assign br0 =
 assign bi0 = 
  state == 2 ? datai[32] : state == 3 ? datai[44] : state == 4 ? datai[38] : state == 5 ? datai[41] : state == 6 ? datai[35] : state == 7 ? datai[47] : state == 8 ? datai[20] : state == 9 ? datai[26] : state == 10 ? datai[17] : state == 11 ? datai[29] : state == 12 ? datai[23] : state == 13 ? datai[24] : state == 14 ? datai[10] : state == 15 ? datai[30] : state == 16 ? datai[13] : state == 17 ? datai[27] : state == 18 ? datai[4] : state == 19 ? datai[28] : state == 20 ? datai[14] : state == 21 ? datai[21] : state == 22 ? datai[7] : state == 23 ? datai[31] : state == 24 ? datai[10] : state == 25 ? datai[22] : state == 26 ? datai[3] : state == 27 ? datai[27] : state == 28 ? datai[15] : state == 29 ? datai[17] : state == 30 ? datai[5] : state == 31 ? datai[29] : state == 32 ? datai[11] : state == 33 ? datai[23] :    0;
 assign wr0 = 
- state == 2 ? 2048 : state == 3 ? 2048 : state == 4 ? 2048 : state == 5 ? 2048 : state == 6 ? 2048 : state == 7 ? 2048 : state == 8 ? 2048 : state == 9 ? -2048 : state == 10 ? 2048 : state == 11 ? -2048 : state == 12 ? 2048 : state == 13 ? 0 : state == 14 ? 2048 : state == 15 ? -1 : state == 16 ? -2048 : state == 17 ? 0 : state == 18 ? 2048 : state == 19 ? -1449 : state == 20 ? -1 : state == 21 ? 1448 : state == 22 ? -2048 : state == 23 ? 1448 : state == 24 ? 1448 : state == 25 ? -784 : state == 26 ? -2048 : state == 27 ? -784 : state == 28 ? 1448 : state == 29 ? 2008 : state == 30 ? 1448 : state == 31 ? 399 : state == 32 ? -784 : state == 33 ? -1703 :    0;
+ state == 2 ? 8388607 : state == 3 ? 8388607 : state == 4 ? 8388607 : state == 5 ? 8388607 : state == 6 ? 8388607 : state == 7 ? 8388607 : state == 8 ? 8388607 : state == 9 ? -8388608 : state == 10 ? 8388607 : state == 11 ? -8388608 : state == 12 ? 8388607 : state == 13 ? 0 : state == 14 ? 8388607 : state == 15 ? -1 : state == 16 ? -8388608 : state == 17 ? 0 : state == 18 ? 8388607 : state == 19 ? -5931642 : state == 20 ? -1 : state == 21 ? 5931641 : state == 22 ? -8388608 : state == 23 ? 5931641 : state == 24 ? 5931641 : state == 25 ? -3210182 : state == 26 ? -8388608 : state == 27 ? -3210182 : state == 28 ? 5931641 : state == 29 ? 8227423 : state == 30 ? 5931641 : state == 31 ? 1636536 : state == 32 ? -3210182 : state == 33 ? -6974873 :    0;
 assign wi0 = 
- state == 2 ? 0 : state == 3 ? 0 : state == 4 ? 0 : state == 5 ? 0 : state == 6 ? 0 : state == 7 ? 0 : state == 8 ? 0 : state == 9 ? -1 : state == 10 ? 0 : state == 11 ? -1 : state == 12 ? 0 : state == 13 ? -2048 : state == 14 ? 0 : state == 15 ? 2048 : state == 16 ? -1 : state == 17 ? -2048 : state == 18 ? 0 : state == 19 ? -1449 : state == 20 ? 2048 : state == 21 ? -1449 : state == 22 ? -1 : state == 23 ? 1448 : state == 24 ? -1449 : state == 25 ? -1893 : state == 26 ? -1 : state == 27 ? 1892 : state == 28 ? 1448 : state == 29 ? -400 : state == 30 ? -1449 : state == 31 ? -2009 : state == 32 ? -1893 : state == 33 ? -1138 :    0;
+ state == 2 ? 0 : state == 3 ? 0 : state == 4 ? 0 : state == 5 ? 0 : state == 6 ? 0 : state == 7 ? 0 : state == 8 ? 0 : state == 9 ? 0 : state == 10 ? 0 : state == 11 ? 0 : state == 12 ? 0 : state == 13 ? 8388607 : state == 14 ? 0 : state == 15 ? -8388608 : state == 16 ? 0 : state == 17 ? 8388607 : state == 18 ? 0 : state == 19 ? 5931641 : state == 20 ? -8388608 : state == 21 ? 5931641 : state == 22 ? 0 : state == 23 ? -5931642 : state == 24 ? 5931641 : state == 25 ? 7750063 : state == 26 ? 0 : state == 27 ? -7750064 : state == 28 ? -5931642 : state == 29 ? 1636536 : state == 30 ? 5931641 : state == 31 ? 8227423 : state == 32 ? 7750063 : state == 33 ? 4660460 :    0;
 assign ar1 = 
  state == 2 ? datar[16] : state == 3 ? datar[28] : state == 4 ? datar[22] : state == 5 ? datar[25] : state == 6 ? datar[19] : state == 7 ? datar[31] : state == 8 ? datar[36] : state == 9 ? datar[42] : state == 10 ? datar[33] : state == 11 ? datar[45] : state == 12 ? datar[39] : state == 13 ? datar[48] : state == 14 ? datar[34] : state == 15 ? datar[54] : state == 16 ? datar[37] : state == 17 ? datar[51] : state == 18 ? datar[32] : state == 19 ? datar[56] : state == 20 ? datar[42] : state == 21 ? datar[49] : state == 22 ? datar[35] : state == 23 ? datar[59] : state == 24 ? datar[40] : state == 25 ? datar[52] : state == 26 ? datar[33] : state == 27 ? datar[57] : state == 28 ? datar[45] : state == 29 ? datar[48] : state == 30 ? datar[36] : state == 31 ? datar[60] : state == 32 ? datar[42] : state == 33 ? datar[54] :    0;
 assign ai1 = 
@@ -339,9 +147,9 @@ assign br1 =
 assign bi1 = 
  state == 2 ? datai[48] : state == 3 ? datai[60] : state == 4 ? datai[54] : state == 5 ? datai[57] : state == 6 ? datai[51] : state == 7 ? datai[63] : state == 8 ? datai[52] : state == 9 ? datai[58] : state == 10 ? datai[49] : state == 11 ? datai[61] : state == 12 ? datai[55] : state == 13 ? datai[56] : state == 14 ? datai[42] : state == 15 ? datai[62] : state == 16 ? datai[45] : state == 17 ? datai[59] : state == 18 ? datai[36] : state == 19 ? datai[60] : state == 20 ? datai[46] : state == 21 ? datai[53] : state == 22 ? datai[39] : state == 23 ? datai[63] : state == 24 ? datai[42] : state == 25 ? datai[54] : state == 26 ? datai[35] : state == 27 ? datai[59] : state == 28 ? datai[47] : state == 29 ? datai[49] : state == 30 ? datai[37] : state == 31 ? datai[61] : state == 32 ? datai[43] : state == 33 ? datai[55] :    0;
 assign wr1 = 
- state == 2 ? -2048 : state == 3 ? -2048 : state == 4 ? -2048 : state == 5 ? -2048 : state == 6 ? -2048 : state == 7 ? -2048 : state == 8 ? 0 : state == 9 ? -1 : state == 10 ? 0 : state == 11 ? -1 : state == 12 ? 0 : state == 13 ? -1449 : state == 14 ? 1448 : state == 15 ? 1448 : state == 16 ? -1449 : state == 17 ? -1449 : state == 18 ? 1892 : state == 19 ? -1893 : state == 20 ? 783 : state == 21 ? 783 : state == 22 ? -1893 : state == 23 ? 1892 : state == 24 ? 1137 : state == 25 ? -1138 : state == 26 ? -2009 : state == 27 ? -400 : state == 28 ? 1702 : state == 29 ? 1959 : state == 30 ? 1299 : state == 31 ? 200 : state == 32 ? -966 : state == 33 ? -1807 :    0;
+ state == 2 ? -8388608 : state == 3 ? -8388608 : state == 4 ? -8388608 : state == 5 ? -8388608 : state == 6 ? -8388608 : state == 7 ? -8388608 : state == 8 ? 0 : state == 9 ? -1 : state == 10 ? 0 : state == 11 ? -1 : state == 12 ? 0 : state == 13 ? -5931642 : state == 14 ? 5931641 : state == 15 ? 5931641 : state == 16 ? -5931642 : state == 17 ? -5931642 : state == 18 ? 7750063 : state == 19 ? -7750064 : state == 20 ? 3210181 : state == 21 ? 3210181 : state == 22 ? -7750064 : state == 23 ? 7750063 : state == 24 ? 4660460 : state == 25 ? -4660461 : state == 26 ? -8227424 : state == 27 ? -1636537 : state == 28 ? 6974872 : state == 29 ? 8027397 : state == 30 ? 5321676 : state == 31 ? 822227 : state == 32 ? -3954363 : state == 33 ? -7398092 :    0;
 assign wi1 = 
- state == 2 ? -1 : state == 3 ? -1 : state == 4 ? -1 : state == 5 ? -1 : state == 6 ? -1 : state == 7 ? -1 : state == 8 ? -2048 : state == 9 ? 2048 : state == 10 ? -2048 : state == 11 ? 2048 : state == 12 ? -2048 : state == 13 ? -1449 : state == 14 ? -1449 : state == 15 ? 1448 : state == 16 ? 1448 : state == 17 ? -1449 : state == 18 ? -784 : state == 19 ? -784 : state == 20 ? 1892 : state == 21 ? -1893 : state == 22 ? 783 : state == 23 ? 783 : state == 24 ? -1703 : state == 25 ? -1703 : state == 26 ? 399 : state == 27 ? 2008 : state == 28 ? 1137 : state == 29 ? -595 : state == 30 ? -1584 : state == 31 ? -2039 : state == 32 ? -1807 : state == 33 ? -966 :    0;
+ state == 2 ? 0 : state == 3 ? 0 : state == 4 ? 0 : state == 5 ? 0 : state == 6 ? 0 : state == 7 ? 0 : state == 8 ? 8388607 : state == 9 ? -8388608 : state == 10 ? 8388607 : state == 11 ? -8388608 : state == 12 ? 8388607 : state == 13 ? 5931641 : state == 14 ? 5931641 : state == 15 ? -5931642 : state == 16 ? -5931642 : state == 17 ? 5931641 : state == 18 ? 3210181 : state == 19 ? 3210181 : state == 20 ? -7750064 : state == 21 ? 7750063 : state == 22 ? -3210182 : state == 23 ? -3210182 : state == 24 ? 6974872 : state == 25 ? 6974872 : state == 26 ? -1636537 : state == 27 ? -8227424 : state == 28 ? -4660461 : state == 29 ? 2435084 : state == 30 ? 6484481 : state == 31 ? 8348214 : state == 32 ? 7398091 : state == 33 ? 3954362 :    0;
 assign ar2 = 
  state == 2 ? datar[8] : state == 3 ? datar[2] : state == 4 ? datar[14] : state == 5 ? datar[5] : state == 6 ? datar[11] : state == 7 ? datar[0] : state == 8 ? datar[12] : state == 9 ? datar[6] : state == 10 ? datar[9] : state == 11 ? datar[3] : state == 12 ? datar[15] : state == 13 ? datar[4] : state == 14 ? datar[18] : state == 15 ? datar[1] : state == 16 ? datar[21] : state == 17 ? datar[7] : state == 18 ? datar[16] : state == 19 ? datar[2] : state == 20 ? datar[26] : state == 21 ? datar[9] : state == 22 ? datar[19] : state == 23 ? datar[0] : state == 24 ? datar[24] : state == 25 ? datar[12] : state == 26 ? datar[17] : state == 27 ? datar[5] : state == 28 ? datar[29] : state == 29 ? datar[8] : state == 30 ? datar[20] : state == 31 ? datar[2] : state == 32 ? datar[26] : state == 33 ? datar[14] :    0;
 assign ai2 = 
@@ -351,9 +159,9 @@ assign br2 =
 assign bi2 = 
  state == 2 ? datai[40] : state == 3 ? datai[34] : state == 4 ? datai[46] : state == 5 ? datai[37] : state == 6 ? datai[43] : state == 7 ? datai[16] : state == 8 ? datai[28] : state == 9 ? datai[22] : state == 10 ? datai[25] : state == 11 ? datai[19] : state == 12 ? datai[31] : state == 13 ? datai[12] : state == 14 ? datai[26] : state == 15 ? datai[9] : state == 16 ? datai[29] : state == 17 ? datai[15] : state == 18 ? datai[20] : state == 19 ? datai[6] : state == 20 ? datai[30] : state == 21 ? datai[13] : state == 22 ? datai[23] : state == 23 ? datai[2] : state == 24 ? datai[26] : state == 25 ? datai[14] : state == 26 ? datai[19] : state == 27 ? datai[7] : state == 28 ? datai[31] : state == 29 ? datai[9] : state == 30 ? datai[21] : state == 31 ? datai[3] : state == 32 ? datai[27] : state == 33 ? datai[15] :    0;
 assign wr2 = 
- state == 2 ? 2048 : state == 3 ? 2048 : state == 4 ? 2048 : state == 5 ? 2048 : state == 6 ? 2048 : state == 7 ? 2048 : state == 8 ? -2048 : state == 9 ? 2048 : state == 10 ? -2048 : state == 11 ? 2048 : state == 12 ? -2048 : state == 13 ? -2048 : state == 14 ? 0 : state == 15 ? 2048 : state == 16 ? -1 : state == 17 ? -2048 : state == 18 ? 1448 : state == 19 ? -2048 : state == 20 ? 1448 : state == 21 ? 0 : state == 22 ? -1449 : state == 23 ? 2048 : state == 24 ? 783 : state == 25 ? -1449 : state == 26 ? -1893 : state == 27 ? -1 : state == 28 ? 1892 : state == 29 ? 1892 : state == 30 ? 1137 : state == 31 ? 0 : state == 32 ? -1138 : state == 33 ? -1893 :    0;
+ state == 2 ? 8388607 : state == 3 ? 8388607 : state == 4 ? 8388607 : state == 5 ? 8388607 : state == 6 ? 8388607 : state == 7 ? 8388607 : state == 8 ? -8388608 : state == 9 ? 8388607 : state == 10 ? -8388608 : state == 11 ? 8388607 : state == 12 ? -8388608 : state == 13 ? -8388608 : state == 14 ? 0 : state == 15 ? 8388607 : state == 16 ? -1 : state == 17 ? -8388608 : state == 18 ? 5931641 : state == 19 ? -8388608 : state == 20 ? 5931641 : state == 21 ? 0 : state == 22 ? -5931642 : state == 23 ? 8388607 : state == 24 ? 3210181 : state == 25 ? -5931642 : state == 26 ? -7750064 : state == 27 ? -1 : state == 28 ? 7750063 : state == 29 ? 7750063 : state == 30 ? 4660460 : state == 31 ? 0 : state == 32 ? -4660461 : state == 33 ? -7750064 :    0;
 assign wi2 = 
- state == 2 ? 0 : state == 3 ? 0 : state == 4 ? 0 : state == 5 ? 0 : state == 6 ? 0 : state == 7 ? 0 : state == 8 ? -1 : state == 9 ? 0 : state == 10 ? -1 : state == 11 ? 0 : state == 12 ? -1 : state == 13 ? -1 : state == 14 ? -2048 : state == 15 ? 0 : state == 16 ? 2048 : state == 17 ? -1 : state == 18 ? -1449 : state == 19 ? -1 : state == 20 ? 1448 : state == 21 ? -2048 : state == 22 ? 1448 : state == 23 ? 0 : state == 24 ? -1893 : state == 25 ? -1449 : state == 26 ? 783 : state == 27 ? 2048 : state == 28 ? 783 : state == 29 ? -784 : state == 30 ? -1703 : state == 31 ? -2048 : state == 32 ? -1703 : state == 33 ? -784 :    0;
+ state == 2 ? 0 : state == 3 ? 0 : state == 4 ? 0 : state == 5 ? 0 : state == 6 ? 0 : state == 7 ? 0 : state == 8 ? 0 : state == 9 ? 0 : state == 10 ? 0 : state == 11 ? 0 : state == 12 ? 0 : state == 13 ? 0 : state == 14 ? 8388607 : state == 15 ? 0 : state == 16 ? -8388608 : state == 17 ? 0 : state == 18 ? 5931641 : state == 19 ? 0 : state == 20 ? -5931642 : state == 21 ? 8388607 : state == 22 ? -5931642 : state == 23 ? 0 : state == 24 ? 7750063 : state == 25 ? 5931641 : state == 26 ? -3210182 : state == 27 ? -8388608 : state == 28 ? -3210182 : state == 29 ? 3210181 : state == 30 ? 6974872 : state == 31 ? 8388607 : state == 32 ? 6974872 : state == 33 ? 3210181 :    0;
 assign ar3 = 
  state == 2 ? datar[24] : state == 3 ? datar[18] : state == 4 ? datar[30] : state == 5 ? datar[21] : state == 6 ? datar[27] : state == 7 ? datar[32] : state == 8 ? datar[44] : state == 9 ? datar[38] : state == 10 ? datar[41] : state == 11 ? datar[35] : state == 12 ? datar[47] : state == 13 ? datar[36] : state == 14 ? datar[50] : state == 15 ? datar[33] : state == 16 ? datar[53] : state == 17 ? datar[39] : state == 18 ? datar[48] : state == 19 ? datar[34] : state == 20 ? datar[58] : state == 21 ? datar[41] : state == 22 ? datar[51] : state == 23 ? datar[32] : state == 24 ? datar[56] : state == 25 ? datar[44] : state == 26 ? datar[49] : state == 27 ? datar[37] : state == 28 ? datar[61] : state == 29 ? datar[40] : state == 30 ? datar[52] : state == 31 ? datar[34] : state == 32 ? datar[58] : state == 33 ? datar[46] :    0;
 assign ai3 = 
@@ -363,9 +171,9 @@ assign br3 =
 assign bi3 = 
  state == 2 ? datai[56] : state == 3 ? datai[50] : state == 4 ? datai[62] : state == 5 ? datai[53] : state == 6 ? datai[59] : state == 7 ? datai[48] : state == 8 ? datai[60] : state == 9 ? datai[54] : state == 10 ? datai[57] : state == 11 ? datai[51] : state == 12 ? datai[63] : state == 13 ? datai[44] : state == 14 ? datai[58] : state == 15 ? datai[41] : state == 16 ? datai[61] : state == 17 ? datai[47] : state == 18 ? datai[52] : state == 19 ? datai[38] : state == 20 ? datai[62] : state == 21 ? datai[45] : state == 22 ? datai[55] : state == 23 ? datai[34] : state == 24 ? datai[58] : state == 25 ? datai[46] : state == 26 ? datai[51] : state == 27 ? datai[39] : state == 28 ? datai[63] : state == 29 ? datai[41] : state == 30 ? datai[53] : state == 31 ? datai[35] : state == 32 ? datai[59] : state == 33 ? datai[47] :    0;
 assign wr3 = 
- state == 2 ? -2048 : state == 3 ? -2048 : state == 4 ? -2048 : state == 5 ? -2048 : state == 6 ? -2048 : state == 7 ? 0 : state == 8 ? -1 : state == 9 ? 0 : state == 10 ? -1 : state == 11 ? 0 : state == 12 ? -1 : state == 13 ? -1449 : state == 14 ? -1449 : state == 15 ? 1448 : state == 16 ? 1448 : state == 17 ? -1449 : state == 18 ? 783 : state == 19 ? -1893 : state == 20 ? 1892 : state == 21 ? -784 : state == 22 ? -784 : state == 23 ? 2008 : state == 24 ? 399 : state == 25 ? -1703 : state == 26 ? -1703 : state == 27 ? 399 : state == 28 ? 2008 : state == 29 ? 1806 : state == 30 ? 965 : state == 31 ? -201 : state == 32 ? -1300 : state == 33 ? -1960 :    0;
+ state == 2 ? -8388608 : state == 3 ? -8388608 : state == 4 ? -8388608 : state == 5 ? -8388608 : state == 6 ? -8388608 : state == 7 ? 0 : state == 8 ? -1 : state == 9 ? 0 : state == 10 ? -1 : state == 11 ? 0 : state == 12 ? -1 : state == 13 ? -5931642 : state == 14 ? -5931642 : state == 15 ? 5931641 : state == 16 ? 5931641 : state == 17 ? -5931642 : state == 18 ? 3210181 : state == 19 ? -7750064 : state == 20 ? 7750063 : state == 21 ? -3210182 : state == 22 ? -3210182 : state == 23 ? 8227423 : state == 24 ? 1636536 : state == 25 ? -6974873 : state == 26 ? -6974873 : state == 27 ? 1636536 : state == 28 ? 8227423 : state == 29 ? 7398091 : state == 30 ? 3954362 : state == 31 ? -822228 : state == 32 ? -5321677 : state == 33 ? -8027398 :    0;
 assign wi3 = 
- state == 2 ? -1 : state == 3 ? -1 : state == 4 ? -1 : state == 5 ? -1 : state == 6 ? -1 : state == 7 ? -2048 : state == 8 ? 2048 : state == 9 ? -2048 : state == 10 ? 2048 : state == 11 ? -2048 : state == 12 ? 2048 : state == 13 ? 1448 : state == 14 ? -1449 : state == 15 ? -1449 : state == 16 ? 1448 : state == 17 ? 1448 : state == 18 ? -1893 : state == 19 ? 783 : state == 20 ? 783 : state == 21 ? -1893 : state == 22 ? 1892 : state == 23 ? -400 : state == 24 ? -2009 : state == 25 ? -1138 : state == 26 ? 1137 : state == 27 ? 2008 : state == 28 ? 399 : state == 29 ? -966 : state == 30 ? -1807 : state == 31 ? -2039 : state == 32 ? -1584 : state == 33 ? -595 :    0;
+ state == 2 ? 0 : state == 3 ? 0 : state == 4 ? 0 : state == 5 ? 0 : state == 6 ? 0 : state == 7 ? 8388607 : state == 8 ? -8388608 : state == 9 ? 8388607 : state == 10 ? -8388608 : state == 11 ? 8388607 : state == 12 ? -8388608 : state == 13 ? -5931642 : state == 14 ? 5931641 : state == 15 ? 5931641 : state == 16 ? -5931642 : state == 17 ? -5931642 : state == 18 ? 7750063 : state == 19 ? -3210182 : state == 20 ? -3210182 : state == 21 ? 7750063 : state == 22 ? -7750064 : state == 23 ? 1636536 : state == 24 ? 8227423 : state == 25 ? 4660460 : state == 26 ? -4660461 : state == 27 ? -8227424 : state == 28 ? -1636537 : state == 29 ? 3954362 : state == 30 ? 7398091 : state == 31 ? 8348214 : state == 32 ? 6484481 : state == 33 ? 2435084 :    0;
 assign ar4 = 
  state == 2 ? datar[4] : state == 3 ? datar[10] : state == 4 ? datar[1] : state == 5 ? datar[13] : state == 6 ? datar[7] : state == 7 ? datar[8] : state == 8 ? datar[2] : state == 9 ? datar[14] : state == 10 ? datar[5] : state == 11 ? datar[11] : state == 12 ? datar[0] : state == 13 ? datar[20] : state == 14 ? datar[6] : state == 15 ? datar[17] : state == 16 ? datar[3] : state == 17 ? datar[23] : state == 18 ? datar[8] : state == 19 ? datar[18] : state == 20 ? datar[1] : state == 21 ? datar[25] : state == 22 ? datar[11] : state == 23 ? datar[16] : state == 24 ? datar[4] : state == 25 ? datar[28] : state == 26 ? datar[9] : state == 27 ? datar[21] : state == 28 ? datar[0] : state == 29 ? datar[24] : state == 30 ? datar[12] : state == 31 ? datar[18] : state == 32 ? datar[6] : state == 33 ? datar[30] :    0;
 assign ai4 = 
@@ -375,9 +183,9 @@ assign br4 =
 assign bi4 = 
  state == 2 ? datai[36] : state == 3 ? datai[42] : state == 4 ? datai[33] : state == 5 ? datai[45] : state == 6 ? datai[39] : state == 7 ? datai[24] : state == 8 ? datai[18] : state == 9 ? datai[30] : state == 10 ? datai[21] : state == 11 ? datai[27] : state == 12 ? datai[8] : state == 13 ? datai[28] : state == 14 ? datai[14] : state == 15 ? datai[25] : state == 16 ? datai[11] : state == 17 ? datai[31] : state == 18 ? datai[12] : state == 19 ? datai[22] : state == 20 ? datai[5] : state == 21 ? datai[29] : state == 22 ? datai[15] : state == 23 ? datai[18] : state == 24 ? datai[6] : state == 25 ? datai[30] : state == 26 ? datai[11] : state == 27 ? datai[23] : state == 28 ? datai[1] : state == 29 ? datai[25] : state == 30 ? datai[13] : state == 31 ? datai[19] : state == 32 ? datai[7] : state == 33 ? datai[31] :    0;
 assign wr4 = 
- state == 2 ? 2048 : state == 3 ? 2048 : state == 4 ? 2048 : state == 5 ? 2048 : state == 6 ? 2048 : state == 7 ? -2048 : state == 8 ? 2048 : state == 9 ? -2048 : state == 10 ? 2048 : state == 11 ? -2048 : state == 12 ? 2048 : state == 13 ? -1 : state == 14 ? -2048 : state == 15 ? 0 : state == 16 ? 2048 : state == 17 ? -1 : state == 18 ? 0 : state == 19 ? -1449 : state == 20 ? 2048 : state == 21 ? -1449 : state == 22 ? -1 : state == 23 ? 1892 : state == 24 ? 0 : state == 25 ? -1893 : state == 26 ? -1449 : state == 27 ? 783 : state == 28 ? 2048 : state == 29 ? 1702 : state == 30 ? 783 : state == 31 ? -400 : state == 32 ? -1449 : state == 33 ? -2009 :    0;
+ state == 2 ? 8388607 : state == 3 ? 8388607 : state == 4 ? 8388607 : state == 5 ? 8388607 : state == 6 ? 8388607 : state == 7 ? -8388608 : state == 8 ? 8388607 : state == 9 ? -8388608 : state == 10 ? 8388607 : state == 11 ? -8388608 : state == 12 ? 8388607 : state == 13 ? -1 : state == 14 ? -8388608 : state == 15 ? 0 : state == 16 ? 8388607 : state == 17 ? -1 : state == 18 ? 0 : state == 19 ? -5931642 : state == 20 ? 8388607 : state == 21 ? -5931642 : state == 22 ? -1 : state == 23 ? 7750063 : state == 24 ? 0 : state == 25 ? -7750064 : state == 26 ? -5931642 : state == 27 ? 3210181 : state == 28 ? 8388607 : state == 29 ? 6974872 : state == 30 ? 3210181 : state == 31 ? -1636537 : state == 32 ? -5931642 : state == 33 ? -8227424 :    0;
 assign wi4 = 
- state == 2 ? 0 : state == 3 ? 0 : state == 4 ? 0 : state == 5 ? 0 : state == 6 ? 0 : state == 7 ? -1 : state == 8 ? 0 : state == 9 ? -1 : state == 10 ? 0 : state == 11 ? -1 : state == 12 ? 0 : state == 13 ? 2048 : state == 14 ? -1 : state == 15 ? -2048 : state == 16 ? 0 : state == 17 ? 2048 : state == 18 ? -2048 : state == 19 ? 1448 : state == 20 ? 0 : state == 21 ? -1449 : state == 22 ? 2048 : state == 23 ? -784 : state == 24 ? -2048 : state == 25 ? -784 : state == 26 ? 1448 : state == 27 ? 1892 : state == 28 ? 0 : state == 29 ? -1138 : state == 30 ? -1893 : state == 31 ? -2009 : state == 32 ? -1449 : state == 33 ? -400 :    0;
+ state == 2 ? 0 : state == 3 ? 0 : state == 4 ? 0 : state == 5 ? 0 : state == 6 ? 0 : state == 7 ? 0 : state == 8 ? 0 : state == 9 ? 0 : state == 10 ? 0 : state == 11 ? 0 : state == 12 ? 0 : state == 13 ? -8388608 : state == 14 ? 0 : state == 15 ? 8388607 : state == 16 ? 0 : state == 17 ? -8388608 : state == 18 ? 8388607 : state == 19 ? -5931642 : state == 20 ? 0 : state == 21 ? 5931641 : state == 22 ? -8388608 : state == 23 ? 3210181 : state == 24 ? 8388607 : state == 25 ? 3210181 : state == 26 ? -5931642 : state == 27 ? -7750064 : state == 28 ? 0 : state == 29 ? 4660460 : state == 30 ? 7750063 : state == 31 ? 8227423 : state == 32 ? 5931641 : state == 33 ? 1636536 :    0;
 assign ar5 = 
  state == 2 ? datar[20] : state == 3 ? datar[26] : state == 4 ? datar[17] : state == 5 ? datar[29] : state == 6 ? datar[23] : state == 7 ? datar[40] : state == 8 ? datar[34] : state == 9 ? datar[46] : state == 10 ? datar[37] : state == 11 ? datar[43] : state == 12 ? datar[32] : state == 13 ? datar[52] : state == 14 ? datar[38] : state == 15 ? datar[49] : state == 16 ? datar[35] : state == 17 ? datar[55] : state == 18 ? datar[40] : state == 19 ? datar[50] : state == 20 ? datar[33] : state == 21 ? datar[57] : state == 22 ? datar[43] : state == 23 ? datar[48] : state == 24 ? datar[36] : state == 25 ? datar[60] : state == 26 ? datar[41] : state == 27 ? datar[53] : state == 28 ? datar[32] : state == 29 ? datar[56] : state == 30 ? datar[44] : state == 31 ? datar[50] : state == 32 ? datar[38] : state == 33 ? datar[62] :    0;
 assign ai5 = 
@@ -387,9 +195,9 @@ assign br5 =
 assign bi5 = 
  state == 2 ? datai[52] : state == 3 ? datai[58] : state == 4 ? datai[49] : state == 5 ? datai[61] : state == 6 ? datai[55] : state == 7 ? datai[56] : state == 8 ? datai[50] : state == 9 ? datai[62] : state == 10 ? datai[53] : state == 11 ? datai[59] : state == 12 ? datai[40] : state == 13 ? datai[60] : state == 14 ? datai[46] : state == 15 ? datai[57] : state == 16 ? datai[43] : state == 17 ? datai[63] : state == 18 ? datai[44] : state == 19 ? datai[54] : state == 20 ? datai[37] : state == 21 ? datai[61] : state == 22 ? datai[47] : state == 23 ? datai[50] : state == 24 ? datai[38] : state == 25 ? datai[62] : state == 26 ? datai[43] : state == 27 ? datai[55] : state == 28 ? datai[33] : state == 29 ? datai[57] : state == 30 ? datai[45] : state == 31 ? datai[51] : state == 32 ? datai[39] : state == 33 ? datai[63] :    0;
 assign wr5 = 
- state == 2 ? -2048 : state == 3 ? -2048 : state == 4 ? -2048 : state == 5 ? -2048 : state == 6 ? -2048 : state == 7 ? -1 : state == 8 ? 0 : state == 9 ? -1 : state == 10 ? 0 : state == 11 ? -1 : state == 12 ? 1448 : state == 13 ? 1448 : state == 14 ? -1449 : state == 15 ? -1449 : state == 16 ? 1448 : state == 17 ? 1448 : state == 18 ? -784 : state == 19 ? -784 : state == 20 ? 1892 : state == 21 ? -1893 : state == 22 ? 783 : state == 23 ? 1702 : state == 24 ? -400 : state == 25 ? -2009 : state == 26 ? -1138 : state == 27 ? 1137 : state == 28 ? 2038 : state == 29 ? 1583 : state == 30 ? 594 : state == 31 ? -595 : state == 32 ? -1584 : state == 33 ? -2039 :    0;
+ state == 2 ? -8388608 : state == 3 ? -8388608 : state == 4 ? -8388608 : state == 5 ? -8388608 : state == 6 ? -8388608 : state == 7 ? -1 : state == 8 ? 0 : state == 9 ? -1 : state == 10 ? 0 : state == 11 ? -1 : state == 12 ? 5931641 : state == 13 ? 5931641 : state == 14 ? -5931642 : state == 15 ? -5931642 : state == 16 ? 5931641 : state == 17 ? 5931641 : state == 18 ? -3210182 : state == 19 ? -3210182 : state == 20 ? 7750063 : state == 21 ? -7750064 : state == 22 ? 3210181 : state == 23 ? 6974872 : state == 24 ? -1636537 : state == 25 ? -8227424 : state == 26 ? -4660461 : state == 27 ? 4660460 : state == 28 ? 8348214 : state == 29 ? 6484481 : state == 30 ? 2435084 : state == 31 ? -2435085 : state == 32 ? -6484482 : state == 33 ? -8348215 :    0;
 assign wi5 = 
- state == 2 ? -1 : state == 3 ? -1 : state == 4 ? -1 : state == 5 ? -1 : state == 6 ? -1 : state == 7 ? 2048 : state == 8 ? -2048 : state == 9 ? 2048 : state == 10 ? -2048 : state == 11 ? 2048 : state == 12 ? -1449 : state == 13 ? 1448 : state == 14 ? 1448 : state == 15 ? -1449 : state == 16 ? -1449 : state == 17 ? 1448 : state == 18 ? -1893 : state == 19 ? 1892 : state == 20 ? -784 : state == 21 ? -784 : state == 22 ? 1892 : state == 23 ? -1138 : state == 24 ? -2009 : state == 25 ? -400 : state == 26 ? 1702 : state == 27 ? 1702 : state == 28 ? -201 : state == 29 ? -1300 : state == 30 ? -1960 : state == 31 ? -1960 : state == 32 ? -1300 : state == 33 ? -201 :    0;
+ state == 2 ? 0 : state == 3 ? 0 : state == 4 ? 0 : state == 5 ? 0 : state == 6 ? 0 : state == 7 ? -8388608 : state == 8 ? 8388607 : state == 9 ? -8388608 : state == 10 ? 8388607 : state == 11 ? -8388608 : state == 12 ? 5931641 : state == 13 ? -5931642 : state == 14 ? -5931642 : state == 15 ? 5931641 : state == 16 ? 5931641 : state == 17 ? -5931642 : state == 18 ? 7750063 : state == 19 ? -7750064 : state == 20 ? 3210181 : state == 21 ? 3210181 : state == 22 ? -7750064 : state == 23 ? 4660460 : state == 24 ? 8227423 : state == 25 ? 1636536 : state == 26 ? -6974873 : state == 27 ? -6974873 : state == 28 ? 822227 : state == 29 ? 5321676 : state == 30 ? 8027397 : state == 31 ? 8027397 : state == 32 ? 5321676 : state == 33 ? 822227 :    0;
 3: begin
 datar[0] <= xr0; datai[0] <= xi0; datar[32] <= yr0; datai[32] <= yi0; 
 datar[16] <= xr1; datai[16] <= xi1; datar[48] <= yr1; datai[48] <= yi1; 
@@ -677,136 +485,4 @@ datar[46] <= xr3; datai[46] <= xi3; datar[47] <= yr3; datai[47] <= yi3;
 datar[30] <= xr4; datai[30] <= xi4; datar[31] <= yr4; datai[31] <= yi4; 
 datar[62] <= xr5; datai[62] <= xi5; datar[63] <= yr5; datai[63] <= yi5; 
     state <= 35;
-end
-35: begin
-datar[0] <= datar[0];
-datai[0] <= datai[0];
-datar[32] <= datar[1];
-datai[32] <= datai[1];
-datar[16] <= datar[2];
-datai[16] <= datai[2];
-datar[48] <= datar[3];
-datai[48] <= datai[3];
-datar[8] <= datar[4];
-datai[8] <= datai[4];
-datar[40] <= datar[5];
-datai[40] <= datai[5];
-datar[24] <= datar[6];
-datai[24] <= datai[6];
-datar[56] <= datar[7];
-datai[56] <= datai[7];
-datar[4] <= datar[8];
-datai[4] <= datai[8];
-datar[36] <= datar[9];
-datai[36] <= datai[9];
-datar[20] <= datar[10];
-datai[20] <= datai[10];
-datar[52] <= datar[11];
-datai[52] <= datai[11];
-datar[12] <= datar[12];
-datai[12] <= datai[12];
-datar[44] <= datar[13];
-datai[44] <= datai[13];
-datar[28] <= datar[14];
-datai[28] <= datai[14];
-datar[60] <= datar[15];
-datai[60] <= datai[15];
-datar[2] <= datar[16];
-datai[2] <= datai[16];
-datar[34] <= datar[17];
-datai[34] <= datai[17];
-datar[18] <= datar[18];
-datai[18] <= datai[18];
-datar[50] <= datar[19];
-datai[50] <= datai[19];
-datar[10] <= datar[20];
-datai[10] <= datai[20];
-datar[42] <= datar[21];
-datai[42] <= datai[21];
-datar[26] <= datar[22];
-datai[26] <= datai[22];
-datar[58] <= datar[23];
-datai[58] <= datai[23];
-datar[6] <= datar[24];
-datai[6] <= datai[24];
-datar[38] <= datar[25];
-datai[38] <= datai[25];
-datar[22] <= datar[26];
-datai[22] <= datai[26];
-datar[54] <= datar[27];
-datai[54] <= datai[27];
-datar[14] <= datar[28];
-datai[14] <= datai[28];
-datar[46] <= datar[29];
-datai[46] <= datai[29];
-datar[30] <= datar[30];
-datai[30] <= datai[30];
-datar[62] <= datar[31];
-datai[62] <= datai[31];
-datar[1] <= datar[32];
-datai[1] <= datai[32];
-datar[33] <= datar[33];
-datai[33] <= datai[33];
-datar[17] <= datar[34];
-datai[17] <= datai[34];
-datar[49] <= datar[35];
-datai[49] <= datai[35];
-datar[9] <= datar[36];
-datai[9] <= datai[36];
-datar[41] <= datar[37];
-datai[41] <= datai[37];
-datar[25] <= datar[38];
-datai[25] <= datai[38];
-datar[57] <= datar[39];
-datai[57] <= datai[39];
-datar[5] <= datar[40];
-datai[5] <= datai[40];
-datar[37] <= datar[41];
-datai[37] <= datai[41];
-datar[21] <= datar[42];
-datai[21] <= datai[42];
-datar[53] <= datar[43];
-datai[53] <= datai[43];
-datar[13] <= datar[44];
-datai[13] <= datai[44];
-datar[45] <= datar[45];
-datai[45] <= datai[45];
-datar[29] <= datar[46];
-datai[29] <= datai[46];
-datar[61] <= datar[47];
-datai[61] <= datai[47];
-datar[3] <= datar[48];
-datai[3] <= datai[48];
-datar[35] <= datar[49];
-datai[35] <= datai[49];
-datar[19] <= datar[50];
-datai[19] <= datai[50];
-datar[51] <= datar[51];
-datai[51] <= datai[51];
-datar[11] <= datar[52];
-datai[11] <= datai[52];
-datar[43] <= datar[53];
-datai[43] <= datai[53];
-datar[27] <= datar[54];
-datai[27] <= datai[54];
-datar[59] <= datar[55];
-datai[59] <= datai[55];
-datar[7] <= datar[56];
-datai[7] <= datai[56];
-datar[39] <= datar[57];
-datai[39] <= datai[57];
-datar[23] <= datar[58];
-datai[23] <= datai[58];
-datar[55] <= datar[59];
-datai[55] <= datai[59];
-datar[15] <= datar[60];
-datai[15] <= datai[60];
-datar[47] <= datar[61];
-datai[47] <= datai[61];
-datar[31] <= datar[62];
-datai[31] <= datai[62];
-datar[63] <= datar[63];
-datai[63] <= datai[63];
-
-    state <= 36;
 end
