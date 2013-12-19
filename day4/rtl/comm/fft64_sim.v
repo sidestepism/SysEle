@@ -50,15 +50,15 @@ module sim_fft64;
 
     always #10 ck <= ~ck;
 
-
    always @(posedge ck) begin
       samples = samples + valid_i;
       // ar = samples == 1 ? 2048 : 0;
-      ar <= (samples == 48) ? 256 : 0;
-      ai <= (samples == 1) ? 0 : 0;
 
-      // ar <= datar[samples];
-      // ai <= datai[samples];
+      // ar <= (samples == 1) ? 256 : 0;
+      // ai <= (samples == 0) ? 0 : 0;
+
+      ar <= datar[samples];
+      ai <= datai[samples];
 
       $monitor("%t valid_i: %b, valid_o: %b, full: %b, state: %d, (%d, %d)", $time, valid_i, valid_o, full, state, ar, ai);
       if (valid_o) begin

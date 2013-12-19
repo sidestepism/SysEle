@@ -15,8 +15,8 @@ class Reg
     end
     def butterflyWith(other, n)
         # n: W_n
-        d0 = self.d
-        d1 = other.d
+        d0 = self.i
+        d1 = other.i
 
         def wr(i)
             s = cos(i.to_f/32*PI)
@@ -86,13 +86,14 @@ end
 #     end
 # end
 
-6.times do |k|
+6.times do |j|
     # k段目
     32.times do |i|
+        k = 5 - j
         # i個目のバタフライ
         a = i/(2**k)*(2**(k+1)) + i%(2**k)
         b = i/(2**k)*(2**(k+1)) + i%(2**k) + 2**k
-        n = (i*32 / 2**k)%64
+        n = (i*32 / 2**k)%32
         # 文を追加
         butterflies += regs[a].butterflyWith(regs [b], n);
         print "#{k}段目の butterfly: #{a} with #{b}, n = #{n}\n"
