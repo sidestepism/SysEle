@@ -20,13 +20,13 @@ class Reg
 
         def wr(i)
             s = cos(i.to_f/32*PI)
-            t = (s * (2**11)).round
+            t = (s * (2**15)).round
             return t;
         end
 
         def wi(i)
             s = -sin(i.to_f/32*PI)
-            t = (s * (2**11)).round
+            t = (s * (2**15)).round
             return t;
         end
         # print "#{wr(n)}, #{wi(n)}\n"
