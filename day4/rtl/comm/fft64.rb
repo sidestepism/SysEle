@@ -151,7 +151,7 @@ end
     print "    0;\n"
 end
 
-state = 3;
+state = 5;
 
 32.times do |i|
     print "#{state}: begin\n"
