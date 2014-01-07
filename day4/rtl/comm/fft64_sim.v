@@ -55,7 +55,7 @@ module sim_fft64;
       samples = samples + valid_i;
       // ar = samples == 1 ? 2048 : 0;
 
-      ar <= 256;
+      ar <= 4;
       ai <= 0;
       // ar <= (samples == 0) ? 0 : 0;
       // ai <= (samples == 1) ? -256 : 0;
