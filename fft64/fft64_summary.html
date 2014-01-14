@@ -2,7 +2,7 @@
 <BODY TEXT='#000000' BGCOLOR='#FFFFFF' LINK='#0000EE' VLINK='#551A8B' ALINK='#FF0000'>
 <TABLE BORDER CELLSPACING=0 CELLPADDING=3 WIDTH='100%'>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'>
-<TD ALIGN=CENTER COLSPAN='4'><B>fft64 Project Status (12/17/2013 - 14:33:10)</B></TD></TR>
+<TD ALIGN=CENTER COLSPAN='4'><B>fft64 Project Status (01/14/2014 - 13:49:20)</B></TD></TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Project File:</B></TD>
 <TD>fft64.ise</TD>
@@ -20,7 +20,7 @@ No Errors</TD>
 <TD BGCOLOR='#FFFF99'><B>Target Device:</B></TD>
 <TD>xc5vlx50-1ff676</TD>
 <TD BGCOLOR='#FFFF99'><UL><LI><B>Warnings:</B></LI></UL></TD>
-<TD ALIGN=LEFT><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/*.xmsgs'>142 Warnings</A></TD>
+<TD ALIGN=LEFT><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/*.xmsgs'>252 Warnings</A></TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Product Version:</B></TD><TD>ISE 11.1</TD>
@@ -33,13 +33,14 @@ No Errors</TD>
 <TD>Balanced</TD>
 <TD BGCOLOR='#FFFF99'><UL><LI><B>Timing Constraints:</B></LI></UL></TD>
 <TD>
-<A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.ptwx?&DataKey=ConstraintsData'>All Constraints Met</A></TD>
+<font color="red"; face="Arial"><b>X </b></font>
+<A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.ptwx?&DataKey=ConstraintsData'>1 Failing Constraint</A></TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Design Strategy:</B></dif></TD>
 <TD>Xilinx Default (unlocked)</TD>
 <TD BGCOLOR='#FFFF99'><UL><LI><B>Final Timing Score:</B></LI></UL></TD>
-<TD>0 (Setup: 0, Hold: 0)&nbsp;<A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.twx?&DataKey=XmlTimingReport'>(Timing Report)</A></TD>
+<TD>2161943 (Setup: 2161943, Hold: 0, Component Switching Limit: 0)&nbsp;<A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.twx?&DataKey=XmlTimingReport'>(Timing Report)</A></TD>
 </TR>
 </TABLE>
 
@@ -51,79 +52,115 @@ No Errors</TD>
 <TD ALIGN=LEFT><B>Slice Logic Utilization</B></TD><TD><B>Used</B></TD><TD><B>Available</B></TD><TD><B>Utilization</B></TD><TD COLSPAN='2'><B>Note(s)</B></TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of Slice Registers</TD>
-<TD ALIGN=RIGHT>1,685</TD>
+<TD ALIGN=RIGHT>1,684</TD>
 <TD ALIGN=RIGHT>28,800</TD>
 <TD ALIGN=RIGHT>5%</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as Flip Flops</TD>
-<TD ALIGN=RIGHT>1,685</TD>
+<TD ALIGN=RIGHT>1,684</TD>
 <TD>&nbsp;</TD>
 <TD>&nbsp;</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of Slice LUTs</TD>
-<TD ALIGN=RIGHT>8,862</TD>
+<TD ALIGN=RIGHT>7,842</TD>
 <TD ALIGN=RIGHT>28,800</TD>
-<TD ALIGN=RIGHT>30%</TD>
+<TD ALIGN=RIGHT>27%</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as logic</TD>
-<TD ALIGN=RIGHT>8,862</TD>
+<TD ALIGN=RIGHT>7,698</TD>
 <TD ALIGN=RIGHT>28,800</TD>
-<TD ALIGN=RIGHT>30%</TD>
+<TD ALIGN=RIGHT>26%</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O6 output only</TD>
-<TD ALIGN=RIGHT>8,860</TD>
+<TD ALIGN=RIGHT>7,585</TD>
 <TD>&nbsp;</TD>
 <TD>&nbsp;</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O5 output only</TD>
-<TD ALIGN=RIGHT>2</TD>
+<TD ALIGN=RIGHT>113</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as Memory</TD>
+<TD ALIGN=RIGHT>132</TD>
+<TD ALIGN=RIGHT>7,680</TD>
+<TD ALIGN=RIGHT>1%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number used as Shift Register</TD>
+<TD ALIGN=RIGHT>132</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O6 output only</TD>
+<TD ALIGN=RIGHT>132</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as exclusive route-thru</TD>
+<TD ALIGN=RIGHT>12</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of route-thrus</TD>
+<TD ALIGN=RIGHT>120</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number using O6 output only</TD>
+<TD ALIGN=RIGHT>120</TD>
 <TD>&nbsp;</TD>
 <TD>&nbsp;</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of occupied Slices</TD>
-<TD ALIGN=RIGHT>3,054</TD>
+<TD ALIGN=RIGHT>2,030</TD>
 <TD ALIGN=RIGHT>7,200</TD>
-<TD ALIGN=RIGHT>42%</TD>
+<TD ALIGN=RIGHT>28%</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of LUT Flip Flop pairs used</TD>
-<TD ALIGN=RIGHT>8,862</TD>
+<TD ALIGN=RIGHT>7,842</TD>
 <TD>&nbsp;</TD>
 <TD>&nbsp;</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number with an unused Flip Flop</TD>
-<TD ALIGN=RIGHT>7,177</TD>
-<TD ALIGN=RIGHT>8,862</TD>
-<TD ALIGN=RIGHT>80%</TD>
+<TD ALIGN=RIGHT>6,158</TD>
+<TD ALIGN=RIGHT>7,842</TD>
+<TD ALIGN=RIGHT>78%</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number with an unused LUT</TD>
 <TD ALIGN=RIGHT>0</TD>
-<TD ALIGN=RIGHT>8,862</TD>
+<TD ALIGN=RIGHT>7,842</TD>
 <TD ALIGN=RIGHT>0%</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number of fully used LUT-FF pairs</TD>
-<TD ALIGN=RIGHT>1,685</TD>
-<TD ALIGN=RIGHT>8,862</TD>
-<TD ALIGN=RIGHT>19%</TD>
+<TD ALIGN=RIGHT>1,684</TD>
+<TD ALIGN=RIGHT>7,842</TD>
+<TD ALIGN=RIGHT>21%</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number of unique control sets</TD>
-<TD ALIGN=RIGHT>6</TD>
+<TD ALIGN=RIGHT>5</TD>
 <TD>&nbsp;</TD>
 <TD>&nbsp;</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number of slice register sites lost<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to control set restrictions</TD>
-<TD ALIGN=RIGHT>11</TD>
+<TD ALIGN=RIGHT>8</TD>
 <TD ALIGN=RIGHT>28,800</TD>
 <TD ALIGN=RIGHT>1%</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
@@ -147,13 +184,13 @@ No Errors</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of DSP48Es</TD>
-<TD ALIGN=RIGHT>18</TD>
+<TD ALIGN=RIGHT>24</TD>
 <TD ALIGN=RIGHT>48</TD>
-<TD ALIGN=RIGHT>37%</TD>
+<TD ALIGN=RIGHT>50%</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>Average Fanout of Non-Clock Nets</TD>
-<TD ALIGN=RIGHT>5.69</TD>
+<TD ALIGN=RIGHT>5.15</TD>
 <TD>&nbsp;</TD>
 <TD>&nbsp;</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
@@ -166,7 +203,7 @@ No Errors</TD>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='4'><B>Performance Summary</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=PerformanceSummary"><B>[-]</B></a></TD></TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Final Timing Score:</B></TD>
-<TD>0 (Setup: 0, Hold: 0)</TD>
+<TD>2161943 (Setup: 2161943, Hold: 0, Component Switching Limit: 0)</TD>
 <TD BGCOLOR='#FFFF99'><B>Pinout Data:</B></TD>
 <TD COLSPAN='2'><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64_par.xrpt?&DataKey=PinoutData'>Pinout Report</A></TD>
 </TR>
@@ -179,7 +216,8 @@ No Errors</TD>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Timing Constraints:</B></TD>
 <TD>
-<A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.ptwx?&DataKey=ConstraintsData'>All Constraints Met</A></TD>
+<font color="red"; face="Arial"><b>X </b></font>
+<A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.ptwx?&DataKey=ConstraintsData'>1 Failing Constraint</A></TD>
 <TD BGCOLOR='#FFFF99'><B>&nbsp;</B></TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TABLE>
@@ -190,13 +228,13 @@ No Errors</TD>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='6'><B>Detailed Reports</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=DetailedReports"><B>[-]</B></a></TD></TR>
 <TR BGCOLOR='#FFFF99'><TD><B>Report Name</B></TD><TD><B>Status</B></TD><TD><B>Generated</B></TD>
 <TD ALIGN=LEFT><B>Errors</B></TD><TD ALIGN=LEFT><B>Warnings</B></TD><TD ALIGN=LEFT COLSPAN='2'><B>Infos</B></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.syr'>Synthesis Report</A></TD><TD>Current</TD><TD>火 12 月 17 14:28:20 2013</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/xst.xmsgs'>141 Warnings</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/xst.xmsgs'>4 Infos</A></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.bld'>Translation Report</A></TD><TD>Current</TD><TD>火 12 月 17 14:28:32 2013</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64_map.mrp'>Map Report</A></TD><TD>Current</TD><TD>火 12 月 17 14:30:15 2013</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/map.xmsgs'>1 Warning</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/map.xmsgs'>6 Infos</A></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.par'>Place and Route Report</A></TD><TD>Current</TD><TD>火 12 月 17 14:32:46 2013</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/par.xmsgs'>3 Infos</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.syr'>Synthesis Report</A></TD><TD>Current</TD><TD>火 1 月 14 13:20:59 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/xst.xmsgs'>250 Warnings</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/xst.xmsgs'>6 Infos</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.bld'>Translation Report</A></TD><TD>Current</TD><TD>火 1 月 14 13:43:04 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64_map.mrp'>Map Report</A></TD><TD>Current</TD><TD>火 1 月 14 13:45:01 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/map.xmsgs'>1 Warning</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/map.xmsgs'>6 Infos</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.par'>Place and Route Report</A></TD><TD>Current</TD><TD>火 1 月 14 13:47:36 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/par.xmsgs'>1 Warning</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/par.xmsgs'>1 Info</A></TD></TR>
 <TR ALIGN=LEFT><TD>Power Report</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.twr'>Post-PAR Static Timing Report</A></TD><TD>Current</TD><TD>火 12 月 17 14:33:09 2013</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/trce.xmsgs'>3 Infos</A></TD></TR>
-<TR ALIGN=LEFT><TD>Bitgen Report</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.twr'>Post-PAR Static Timing Report</A></TD><TD>Current</TD><TD>火 1 月 14 13:48:02 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/trce.xmsgs'>2 Infos</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/fft64.bgn'>Bitgen Report</A></TD><TD>Out of Date</TD><TD>火 1 月 14 13:39:10 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/oneseg13/oneseg/day4/fft64/_xmsgs/bitgen.xmsgs'>1 Info</A></TD></TR>
 </TABLE>
 &nbsp;<BR><TABLE BORDER CELLSPACING=0 CELLPADDING=3 WIDTH='100%'>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='3'><B>Secondary Reports</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=SecondaryReports"><B>[-]</B></a></TD></TR>
@@ -204,4 +242,4 @@ No Errors</TD>
 </TABLE>
 
 
-<br><center><b>Date Generated:</b> 12/17/2013 - 14:33:10</ce
+<br><center><b>Date Generated:</b> 01/14/2014 - 13:49:20
