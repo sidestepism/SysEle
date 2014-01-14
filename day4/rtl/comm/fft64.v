@@ -241,12 +241,12 @@ wire [width-1:0] datawi63; assign datawi63 = datai[63];
         wr4, wi4,
         wr5, wi5;
 
-    butterfly butterfly0(.CLK(CLK), .RST(RST), .ar(ar0), .ai(ai0), .br(br0), .bi(bi0), .wr(wr0), .wi(wi0), .xr(xr0), .xi(xi0), .yr(yr0), .yi(yi0));
-    butterfly butterfly1(.CLK(CLK), .RST(RST), .ar(ar1), .ai(ai1), .br(br1), .bi(bi1), .wr(wr1), .wi(wi1), .xr(xr1), .xi(xi1), .yr(yr1), .yi(yi1));
-    butterfly butterfly2(.CLK(CLK), .RST(RST), .ar(ar2), .ai(ai2), .br(br2), .bi(bi2), .wr(wr2), .wi(wi2), .xr(xr2), .xi(xi2), .yr(yr2), .yi(yi2));
-    butterfly butterfly3(.CLK(CLK), .RST(RST), .ar(ar3), .ai(ai3), .br(br3), .bi(bi3), .wr(wr3), .wi(wi3), .xr(xr3), .xi(xi3), .yr(yr3), .yi(yi3));
-    butterfly butterfly4(.CLK(CLK), .RST(RST), .ar(ar4), .ai(ai4), .br(br4), .bi(bi4), .wr(wr4), .wi(wi4), .xr(xr4), .xi(xi4), .yr(yr4), .yi(yi4));
-    butterfly butterfly5(.CLK(CLK), .RST(RST), .ar(ar5), .ai(ai5), .br(br5), .bi(bi5), .wr(wr5), .wi(wi5), .xr(xr5), .xi(xi5), .yr(yr5), .yi(yi5));
+    butterfly #(.width(width)) butterfly0(.CLK(CLK), .RST(RST), .ar(ar0), .ai(ai0), .br(br0), .bi(bi0), .wr(wr0), .wi(wi0), .xr(xr0), .xi(xi0), .yr(yr0), .yi(yi0));
+    butterfly #(.width(width)) butterfly1(.CLK(CLK), .RST(RST), .ar(ar1), .ai(ai1), .br(br1), .bi(bi1), .wr(wr1), .wi(wi1), .xr(xr1), .xi(xi1), .yr(yr1), .yi(yi1));
+    butterfly #(.width(width)) butterfly2(.CLK(CLK), .RST(RST), .ar(ar2), .ai(ai2), .br(br2), .bi(bi2), .wr(wr2), .wi(wi2), .xr(xr2), .xi(xi2), .yr(yr2), .yi(yi2));
+    butterfly #(.width(width)) butterfly3(.CLK(CLK), .RST(RST), .ar(ar3), .ai(ai3), .br(br3), .bi(bi3), .wr(wr3), .wi(wi3), .xr(xr3), .xi(xi3), .yr(yr3), .yi(yi3));
+    butterfly #(.width(width)) butterfly4(.CLK(CLK), .RST(RST), .ar(ar4), .ai(ai4), .br(br4), .bi(bi4), .wr(wr4), .wi(wi4), .xr(xr4), .xi(xi4), .yr(yr4), .yi(yi4));
+    butterfly #(.width(width)) butterfly5(.CLK(CLK), .RST(RST), .ar(ar5), .ai(ai5), .br(br5), .bi(bi5), .wr(wr5), .wi(wi5), .xr(xr5), .xi(xi5), .yr(yr5), .yi(yi5));
 
 assign ar0 =
  state == 2 ? datar[0] : state == 3 ? datar[6] : state == 4 ? datar[12] : state == 5 ? datar[18] : state == 6 ? datar[24] : state == 7 ? datar[30] : state == 8 ? datar[4] : state == 9 ? datar[10] : state == 10 ? datar[32] : state == 11 ? datar[38] : state == 12 ? datar[44] : state == 13 ? datar[2] : state == 14 ? datar[16] : state == 15 ? datar[22] : state == 16 ? datar[36] : state == 17 ? datar[50] : state == 18 ? datar[0] : state == 19 ? datar[10] : state == 20 ? datar[24] : state == 21 ? datar[34] : state == 22 ? datar[48] : state == 23 ? datar[58] : state == 24 ? datar[8] : state == 25 ? datar[20] : state == 26 ? datar[32] : state == 27 ? datar[44] : state == 28 ? datar[56] : state == 29 ? datar[4] : state == 30 ? datar[16] : state == 31 ? datar[28] : state == 32 ? datar[40] : state == 33 ? datar[52] :    0;
