@@ -59,8 +59,8 @@ module butterfly
         // yi <= sbi[width-1+16:16] + (sbi[17] ? (sbi[width-1+16] ? -1 : 1) : 0);
         // yr <= (sbr >>> 15) + (carryr ? (sbr[width-1+16] ? 1 : -1) : 0);
         // yi <= (sbi >>> 15) + (carryi ? (sbi[width-1+16] ? 1 : -1) : 0);
-        yr <= tbr >>> 19 + tbr[18];
-        yi <= tbi >>> 19 + tbi[18];
+        yr <= (tbr >>> 19) + tbr[18];
+        yi <= (tbi >>> 19) + tbi[18];
     end
 
 endmodule
