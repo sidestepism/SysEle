@@ -18,8 +18,8 @@ module butterfly
         output reg signed [width-1:0] yi
     );
 
-    reg signed [width-1+20:0] sbr, sbi;
-    reg signed [width-1:0] sxr, sxi, tdr, tdi, tar, tai;
+    wire signed [width-1+20:0] sqr, sqi;
+    reg signed [width-1:0] sar, sbr, sai, sbi, swr, swi;
     reg signed [23:0] twr, twi;
 
     // * でつぶれてしまう
@@ -43,18 +43,24 @@ module butterfly
 
     // 2段パイプライン
     // ar, br, wr -> sbr
+    assign sqr = ((sar - sbr) * swr) - ((sai - sbi) * swi);
+    assign sqi = ((sar - sbr) * swi) + ((sai - sbi) * swr);
 
     always @(posedge CLK) begin
+        // 1段目 (state: 2)
+        sar <= ar;
+        sbr <= br;
+        sai <= ai;
+        sbi <= bi;
+        swr <= wr;
+        swi <= wi;
+
         // 2段目 (state: 3)
-        sbr <= ((ar - br) * wr) - ((ai - bi) * wi);
-        sbi <= ((ar - br) * wi) + ((ai - bi) * wr);
-        sxr <= ar + br;
-        sxi <= ai + bi;
         // 2段目 (state: 4)
-        xr <= sxr;
-        xi <= sxi;
-        yr <= (sbr >>> 19) + sbr[18];
-        yi <= (sbi >>> 19) + sbi[18];
+        xr <= sar + sbr;
+        xi <= sai + sbi;
+        yr <= (sqr >>> 19) + sqr[18];
+        yi <= (sqi >>> 19) + sqi[18];
     end
 
 endmodule
